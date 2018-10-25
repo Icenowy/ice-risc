@@ -1,7 +1,17 @@
-module regfile_32(input wire iwClk, input wire iwnRst, input wire iwWriteEnable,
-		  input wire [4:0]iwReadReg1, input wire [4:0]iwReadReg2,
-		  input wire [4:0]iwWriteReg, output wire [31:0]owReadData1,
-		  output wire [31:0]owReadData2, input wire [31:0]iwWriteData);
+module regfile_32(
+	input wire iwClk,
+	input wire iwnRst,
+       
+	input wire iwWriteEnable,
+
+	input wire [4:0]iwReadReg1,
+       	input wire [4:0]iwReadReg2,
+	input wire [4:0]iwWriteReg,
+
+       	output wire [31:0]owReadData1,
+	output wire [31:0]owReadData2,
+	input wire [31:0]iwWriteData
+);
 
 integer i;
 reg [31:0]rRegFile[31:0];

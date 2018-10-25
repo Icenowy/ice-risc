@@ -1,5 +1,11 @@
-module alu(input wire [31:0]iwA, input wire [31:0]iwB, input wire [5:0]iwAluOp,
-	   output wire owZero, output wire owSign, output reg [31:0] owResult);
+module alu(
+	input wire [31:0]iwA,
+	input wire [31:0]iwB,
+	input wire [5:0]iwAluOp,
+	output wire owZero,
+	output wire owSign,
+	output reg [31:0] owResult
+);
 
 `include "macros/aluops.v"
 
