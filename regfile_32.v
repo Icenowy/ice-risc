@@ -19,6 +19,11 @@ reg [31:0]rRegFile[31:0];
 assign owReadData1 = (iwReadReg1 == 0) ? 0 : rRegFile[iwReadReg1];
 assign owReadData2 = (iwReadReg2 == 0) ? 0 : rRegFile[iwReadReg2];
 
+initial begin
+	for (i = 0; i < 32; i = i + 1)
+		rRegFile[i] <= 0;
+end
+
 always @(negedge iwClk or negedge iwnRst) begin
 	if (!iwnRst) begin
 		for (i = 0; i < 32; i = i + 1)

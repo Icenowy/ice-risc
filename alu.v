@@ -37,6 +37,8 @@ always @(iwAluOp or iwA or iwB) begin
 		owResult = iwA >>> iwB[4:0];
 	else if (iwAluOp == `ALU_OP_SUB)
 		owResult = iwA - iwB;
+	else if (iwAluOp == `ALU_OP_EQ)
+		owResult = iwA == iwB;
 	else
 		owResult = 0;
 end

@@ -1,0 +1,123 @@
+module control_rv(
+	input wire iwClk,
+	input wire iwnRst,
+
+	output wire [31:0]owRead1Addr,
+	output wire [31:0]owRead2Addr,
+	output wire [31:0]owWriteAddr,
+	output wire [31:0]owWriteData,
+	output wire [3:0]owWstrb,
+
+	input wire [31:0]iwRead1Data,
+	input wire [31:0]iwRead2Data,
+
+	output reg rnHalt
+);
+
+`include "macros/control.v"
+
+wire [31:0]wPc;
+wire wPcUpdate;
+
+reg [31:0]rInstruction;
+
+wire [5:0]wAluOp;
+wire wAluBSrc;
+wire [31:0]wAluBImmediate;
+wire wBranchInverted;
+wire wAluZero;
+wire wAluSign;
+wire [31:0]wAluA;
+wire [31:0]wAluB;
+wire [31:0]wAluResult;
+
+wire [4:0]wReadReg1;
+wire [4:0]wReadReg2;
+wire [4:0]wWriteReg;
+wire wRegWriteEnable;
+wire [1:0]wWriteRegSource;
+wire [31:0]wWriteRegImmediate;
+wire [31:0]wWriteRegValue;
+wire [31:0]wReadReg1Value;
+wire [31:0]wReadReg2Value;
+
+wire wDMemWrite;
+wire wDMemSignExtend;
+wire [1:0]wDMemAccess;
+
+wire [1:0]wNextPcSrc;
+wire [19:0]wNextPcImmediate20;
+wire [11:0]wNextPcImmediate12;
+wire wBranchStatus;
+
+wire [3:0]wException;
+
+wire [31:0]wNextPc;
+
+wire [31:0]wReadDMemData;
+wire [31:0]wReadDMemResult;
+
+wire wnStall;
+
+alu mAlu(wAluA, wAluB, wAluOp, wAluZero, wAluSign, wAluResult);
+
+regfile_32 mRegFile(iwClk, iwnRst, wRegWriteEnable, wReadReg1, wReadReg2,
+		    wWriteReg, wReadReg1Value, wReadReg2Value, wWriteRegValue);
+
+next_pc_rv mNextPc(wNextPcSrc, wPc, wReadReg1Value, wNextPcImmediate20,
+		   wNextPcImmediate12, wBranchStatus, wNextPc);
+
+pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, 32'b0, wPc);
+
+sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
+				    wDMemSignExtend, wReadDMemResult);
+
+instr_exec_rv mInstrExec(iwnRst, rInstruction, wPc, wAluOp, wAluBSrc,
+			 wAluBImmediate, wBranchInverted, wReadReg1,
+			 wReadReg2, wWriteReg, wWriteRegSource,
+			 wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
+			 wDMemAccess, wNextPcSrc, wNextPcImmediate20,
+			 wNextPcImmediate12, wException);
+
+assign wPcUpdate = wnStall;
+
+assign wAluA = wReadReg1Value;
+assign wAluB = (wAluBSrc == `ALU_B_SOURCE_REG ) ?
+	       wReadReg2Value : wAluBImmediate;
+
+assign wWriteRegValue = (wWriteRegSource == `REG_SOURCE_ALU) ? wAluResult :
+			((wWriteRegSource == `REG_SOURCE_MEMORY) ?
+			 wReadDMemResult : wWriteRegImmediate);
+
+assign wBranchStatus = (~wAluZero) ^ wBranchInverted;
+
+assign wnStall = rnHalt;
+
+assign wRegWriteEnable = wnStall;
+
+assign owRead1Addr = wPc;
+assign owRead2Addr = wAluResult;
+assign wReadDMemData = iwRead2Data;
+
+assign owWriteAddr = wAluResult;
+assign owWriteData = wReadReg2Value;
+assign owWstrb = (!wDMemWrite) ? 0 : 
+		 ((wDMemAccess == `MEM_ACCESS_BYTE) ? 4'b0001 :
+		  ((wDMemAccess == `MEM_ACCESS_HALF_WORD) ? 4'b0011 : 4'b1111));
+
+initial begin
+	rInstruction <= 32'h00000013; /* Normalized NOP */
+	rnHalt <= 1;
+end
+
+always @(negedge iwClk or negedge iwnRst) begin
+	if (!iwnRst) begin
+		rInstruction <= 32'h00000013; /* Normalized NOP */
+		rnHalt <= 1;
+	end else begin
+		rInstruction <= iwRead1Data;
+		rnHalt <= wException == `EXCEPTION_SUCCESS;
+	end
+end
+
+endmodule

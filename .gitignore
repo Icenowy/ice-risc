@@ -1,3 +1,13 @@
 *.vcd
 *.vvp
 *.swp
+
+c.o
+s.o
+test.bin
+test.elf
+test_padded.bin
+test.txt
+
+gen_simple_memory_rom
+gen_simple_memory_rom.o
