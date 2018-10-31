@@ -17,6 +17,7 @@ module control_rv(
 `include "macros/control.v"
 
 wire [31:0]wPc;
+wire [31:0]wOldPc;
 wire wPcUpdate;
 
 reg [31:0]rInstruction;
@@ -67,12 +68,12 @@ regfile_32 mRegFile(iwClk, iwnRst, wRegWriteEnable, wReadReg1, wReadReg2,
 next_pc_rv mNextPc(wNextPcSrc, wPc, wReadReg1Value, wNextPcImmediate20,
 		   wNextPcImmediate12, wBranchStatus, wNextPc);
 
-pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, 32'b0, wPc);
+pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
 
 sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
 				    wDMemSignExtend, wReadDMemResult);
 
-instr_exec_rv mInstrExec(iwnRst, rInstruction, wPc, wAluOp, wAluBSrc,
+instr_exec_rv mInstrExec(iwnRst, rInstruction, wPc, wOldPc, wAluOp, wAluBSrc,
 			 wAluBImmediate, wBranchInverted, wReadReg1,
 			 wReadReg2, wWriteReg, wWriteRegSource,
 			 wWriteRegImmediate, wDMemWrite, wDMemSignExtend,

@@ -3,6 +3,7 @@ module instr_exec_rv(
 
 	input wire [31:0]iwInstr,
 	input wire [31:0]iwPc,
+	input wire [31:0]iwOldPc,
 
 	output reg [5:0]orAluOp,
 	output reg orAluBSrc,
@@ -71,7 +72,7 @@ initial begin
 	orWriteRegImmediate = 0;
 end
 
-always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc) begin
+always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc or iwOldPc) begin
 	if (!iwnRst) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
@@ -125,8 +126,8 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
-		orWriteRegImmediate = iwPc + 4;
-		
+		orWriteRegImmediate = iwOldPc + 4;
+
 		orNextPcSrc = `NEXT_PC_SRC_JAL;
 		orNextPcImmediate20 = wImmediate20;
 		orNextPcImmediate12 = 0;
@@ -141,7 +142,7 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
-		orWriteRegImmediate = iwPc + 4;
+		orWriteRegImmediate = iwOldPc + 4;
 		orReadReg1 = wRs1;
 
 		orNextPcSrc = `NEXT_PC_SRC_JALR;
