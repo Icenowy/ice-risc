@@ -7,5 +7,6 @@ jal main
 ebreak
 
 basic_test:
-nop
+lui s0, 64
+auipc s1, 80
 jr ra

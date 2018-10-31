@@ -111,7 +111,7 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
-		orWriteRegImmediate = {wImmediate20, 12'h0} + iwPc;
+		orWriteRegImmediate = {wImmediate20, 12'h0} + iwOldPc;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
 		orNextPcImmediate20 = 0;
