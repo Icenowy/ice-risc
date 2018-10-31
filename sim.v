@@ -15,7 +15,7 @@ wire [31:0]wLastData;
 reg rClk;
 reg rnRst;
 
-sim_memory mSimMemory(rClk, rnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data, wLastData);
+simple_memory mSimMemory(rClk, rnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data, wLastData);
 
 ice_risc_rv mIceRiscRV(rClk, rnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data);
 

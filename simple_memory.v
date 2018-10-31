@@ -1,4 +1,6 @@
-module simple_memory(
+module simple_memory#(
+	parameter [ 31:0] pWords = 32'd128
+)(
 	input wire iwClk,
 	input wire iwnRst,
 
@@ -12,7 +14,7 @@ module simple_memory(
 	output wire [31:0]owRead2Data,
 	output wire [31:0]owLastData
 );
-reg [7:0]rMemory[0:511];
+reg [7:0]rMemory[0:pWords * 4 - 1];
 
 assign owRead1Data[7:0] = rMemory[iwRead1Addr];
 assign owRead1Data[15:8] = rMemory[iwRead1Addr + 1];
@@ -23,10 +25,10 @@ assign owRead2Data[15:8] = rMemory[iwRead2Addr + 1];
 assign owRead2Data[23:16] = rMemory[iwRead2Addr + 2];
 assign owRead2Data[31:24] = rMemory[iwRead2Addr + 3];
 
-assign owLastData[7:0] = rMemory[508];
-assign owLastData[15:8] = rMemory[509];
-assign owLastData[23:16] = rMemory[510];
-assign owLastData[31:24] = rMemory[511];
+assign owLastData[7:0] = rMemory[pWords * 4 - 4];
+assign owLastData[15:8] = rMemory[pWords * 4 - 3];
+assign owLastData[23:16] = rMemory[pWords * 4 - 2];
+assign owLastData[31:24] = rMemory[pWords * 4 - 1];
 
 initial begin
 	`include "simple_memory_rom.v"
@@ -34,10 +36,10 @@ end
 
 always @(negedge iwClk or negedge iwnRst) begin
 	if (!iwnRst) begin
-		rMemory[511] = 0;
-		rMemory[510] = 0;
-		rMemory[509] = 0;
-		rMemory[508] = 0;
+		rMemory[pWords * 4 - 1] = 0;
+		rMemory[pWords * 4 - 2] = 0;
+		rMemory[pWords * 4 - 3] = 0;
+		rMemory[pWords * 4 - 4] = 0;
 	end else begin
 		if (iwWstrb & 4'b1)
 			rMemory[iwWriteAddr] = iwWriteData[7:0];
