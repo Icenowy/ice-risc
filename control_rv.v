@@ -96,7 +96,7 @@ assign wnStall = rnHalt;
 assign wRegWriteEnable = wnStall;
 
 assign owRead1Addr = wPc;
-assign owRead2Addr = wAluResult;
+assign owRead2Addr = {wAluResult[31:2], 2'b00};
 assign wReadDMemData = iwRead2Data;
 
 assign owWriteAddr = wAluResult;
