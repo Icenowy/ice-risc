@@ -7,11 +7,11 @@ module instr_exec_rv(
 
 	output reg [5:0]orAluOp,
 	output reg orAluBSrc,
-	output reg [31:0]orAluBImmediate,
+	output wire [31:0]owAluBImmediate,
 	output reg orBranchInverted,
 
-	output reg [4:0]orReadReg1,
-	output reg [4:0]orReadReg2,
+	output wire [4:0]owReadReg1,
+	output wire [4:0]owReadReg2,
 	output reg [4:0]orWriteReg,
 	output reg [1:0]orWriteRegSource,
 	output reg [31:0]orWriteRegImmediate,
@@ -56,10 +56,18 @@ sign_extend_12_32 mImmediate20SignExtend(wImmediate12, wImmediate12Extended);
 sign_extend_12_32 mImmediate20SClassSignExtend(wImmediate12SClass,
 					       wImmediate12SClassExtended);
 
+assign owReadReg1 = wRs1;
+assign owReadReg2 = wRs2;
+
+assign owAluBImmediate = (wOpCode == `RISCV_OPCODE_LOAD ||
+			  wOpCode == `RISCV_OPCODE_OP_IMM) ?
+			 wImmediate12Extended :
+			 ((wOpCode == `RISCV_OPCODE_STORE) ?
+			  wImmediate12SClassExtended : 0);
+
 initial begin
 	orAluOp = 0;
 	orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-	orAluBImmediate = 0;
 	orBranchInverted = 0;
 
 	orNextPcSrc = `NEXT_PC_SRC_SEQ;
@@ -72,11 +80,10 @@ initial begin
 	orWriteRegImmediate = 0;
 end
 
-always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc or iwOldPc) begin
+always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc or iwOldPc) begin
 	if (!iwnRst) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
@@ -91,7 +98,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 	end else if (wOpCode == `RISCV_OPCODE_LUI) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
@@ -106,7 +112,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 	end else if (wOpCode == `RISCV_OPCODE_AUIPC) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
@@ -121,7 +126,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 	end else if (wOpCode == `RISCV_OPCODE_JAL) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
@@ -137,13 +141,11 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 		     wFunct3 == `RISCV_FUNCT3_JALR) begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
 		orWriteRegImmediate = iwOldPc + 4;
-		orReadReg1 = wRs1;
 
 		orNextPcSrc = `NEXT_PC_SRC_JALR;
 		orNextPcImmediate20 = 0;
@@ -151,13 +153,10 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_BRANCH) begin
-		orAluBImmediate = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
-		orReadReg1 = wRs1;
-		orReadReg2 = wRs2;
 		
 		orNextPcSrc = `NEXT_PC_SRC_B;
 		orNextPcImmediate20 = 0;
@@ -199,7 +198,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 		orWriteRegSource = `REG_SOURCE_MEMORY;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
-		orReadReg1 = wRs1;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
 		orNextPcImmediate20 = 0;
@@ -207,7 +205,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orAluOp = `ALU_OP_ADD;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = wImmediate12Extended;
 
 		orDMemWrite = 0;
 
@@ -240,8 +237,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
-		orReadReg1 = wRs1;
-		orReadReg2 = wRs2;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
 		orNextPcImmediate20 = 0;
@@ -249,7 +244,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 
 		orAluOp = `ALU_OP_ADD;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = wImmediate12SClassExtended;
 
 		orDMemWrite = 1;
 
@@ -272,14 +266,12 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 		orWriteRegSource = `REG_SOURCE_ALU;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
-		orReadReg1 = wRs1;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
 		orNextPcImmediate20 = 0;
 		orNextPcImmediate12 = 0;
 
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = wImmediate12Extended;
 
 		orDMemWrite = 0;
 
@@ -316,13 +308,10 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 		end
 	end else if (wOpCode == `RISCV_OPCODE_OP) begin
 		orBranchInverted = 0;
-		orAluBImmediate = 0;
 
 		orWriteRegSource = `REG_SOURCE_ALU;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
-		orReadReg1 = wRs1;
-		orReadReg2 = wRs2;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
 		orNextPcImmediate20 = 0;
@@ -375,7 +364,6 @@ always @(iwnRst or iwInstr or wRs1 or wRs2 or wRd or wImmediate20 or wImmediate1
 	end else begin
 		orAluOp = 0;
 		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orAluBImmediate = 0;
 		orBranchInverted = 0;
 
 		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
