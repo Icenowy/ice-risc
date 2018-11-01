@@ -6,14 +6,14 @@ module instr_exec_rv(
 	input wire [31:0]iwOldPc,
 
 	output reg [5:0]orAluOp,
-	output reg orAluBSrc,
+	output wire owAluBSrc,
 	output wire [31:0]owAluBImmediate,
-	output reg orBranchInverted,
+	output wire owBranchInverted,
 
 	output wire [4:0]owReadReg1,
 	output wire [4:0]owReadReg2,
 	output reg [4:0]orWriteReg,
-	output reg [1:0]orWriteRegSource,
+	output wire [1:0]owWriteRegSource,
 	output reg [31:0]orWriteRegImmediate,
 
 	output reg orDMemWrite,
@@ -21,8 +21,8 @@ module instr_exec_rv(
 	output reg [1:0]orDMemAccess,
 
 	output reg [1:0]orNextPcSrc,
-	output reg [19:0]orNextPcImmediate20,
-	output reg [11:0]orNextPcImmediate12,
+	output wire [19:0]owNextPcImmediate20,
+	output wire [11:0]owNextPcImmediate12,
 
 	output reg [3:0]orException
 );
@@ -65,17 +65,30 @@ assign owAluBImmediate = (wOpCode == `RISCV_OPCODE_LOAD ||
 			 ((wOpCode == `RISCV_OPCODE_STORE) ?
 			  wImmediate12SClassExtended : 0);
 
+assign owAluBSrc = (wOpCode == `RISCV_OPCODE_BRANCH ||
+		    wOpCode == `RISCV_OPCODE_OP) ?
+		   `ALU_B_SOURCE_REG : `ALU_B_SOURCE_IMMEDIATE;
+
+assign owBranchInverted = (wFunct3 == `RISCV_FUNCT3_BRANCH_BNE ||
+			   wFunct3 == `RISCV_FUNCT3_BRANCH_BGE ||
+			   wFunct3 == `RISCV_FUNCT3_BRANCH_BGEU);
+
+assign owWriteRegSource = (wOpCode == `RISCV_OPCODE_OP ||
+			   wOpCode == `RISCV_OPCODE_OP_IMM) ?
+			  `REG_SOURCE_ALU :
+			  ((wOpCode == `RISCV_OPCODE_LOAD) ?
+			   `REG_SOURCE_MEMORY : `REG_SOURCE_IMMEDIATE);
+
+assign owNextPcImmediate20 = wImmediate20;
+assign owNextPcImmediate12 = (wOpCode == `RISCV_OPCODE_BRANCH) ?
+			     wImmediate12SClass : wImmediate12;
+
 initial begin
 	orAluOp = 0;
-	orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-	orBranchInverted = 0;
 
 	orNextPcSrc = `NEXT_PC_SRC_SEQ;
-	orNextPcImmediate20 = 0;
-	orNextPcImmediate12 = 0;
 	orException = `EXCEPTION_SUCCESS;
 
-	orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 	orWriteReg = 0;
 	orWriteRegImmediate = 0;
 end
@@ -83,128 +96,86 @@ end
 always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc or iwOldPc) begin
 	if (!iwnRst) begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 		orException = `EXCEPTION_SUCCESS;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
 
 	end else if (wOpCode == `RISCV_OPCODE_LUI) begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
 		orWriteRegImmediate = {wImmediate20, 12'h0};
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 
 		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_AUIPC) begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
 		orWriteRegImmediate = {wImmediate20, 12'h0} + iwOldPc;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 
 		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_JAL) begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
 		orWriteRegImmediate = iwOldPc + 4;
 
 		orNextPcSrc = `NEXT_PC_SRC_JAL;
-		orNextPcImmediate20 = wImmediate20;
-		orNextPcImmediate12 = 0;
 
 		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_JALR &&
 		     wFunct3 == `RISCV_FUNCT3_JALR) begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = wRd;
 		orWriteRegImmediate = iwOldPc + 4;
 
 		orNextPcSrc = `NEXT_PC_SRC_JALR;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = wImmediate12;
 
 		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_BRANCH) begin
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
 		
 		orNextPcSrc = `NEXT_PC_SRC_B;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = wImmediate12SClass;
 		
-		orAluBSrc = `ALU_B_SOURCE_REG;
-
 		orDMemWrite = 0;
 
 		orException = `EXCEPTION_SUCCESS;
 
 		if (wFunct3 == `RISCV_FUNCT3_BRANCH_BEQ) begin
 			orAluOp = `ALU_OP_EQ;
-			orBranchInverted = 0;
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BNE) begin
 			orAluOp = `ALU_OP_EQ;
-			orBranchInverted = 1;
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BLT) begin
 			orAluOp = `ALU_OP_SLT;
-			orBranchInverted = 0;
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BGE) begin
 			orAluOp = `ALU_OP_SLT;
-			orBranchInverted = 1;
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BLTU) begin
 			orAluOp = `ALU_OP_SLTU;
-			orBranchInverted = 0;
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BGEU) begin
 			orAluOp = `ALU_OP_SLTU;
-			orBranchInverted = 1;
 		end else begin
 			orException = `EXCEPTION_ILLEGAL_INSTR;
 
 			orAluOp = `ALU_OP_ADD;
-			orBranchInverted = 1;
 		end
 	end else if (wOpCode == `RISCV_OPCODE_LOAD) begin
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_MEMORY;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 
 		orAluOp = `ALU_OP_ADD;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
 
 		orDMemWrite = 0;
 
@@ -226,24 +197,18 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 			orDMemSignExtend = 0;
 			orDMemAccess = `MEM_ACCESS_HALF_WORD;
 		end else begin
-			orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 			orWriteReg = 0;
 
 			orException = `EXCEPTION_ILLEGAL_INSTR;
 		end
 	end else if (wOpCode == `RISCV_OPCODE_STORE) begin
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 
 		orAluOp = `ALU_OP_ADD;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
 
 		orDMemWrite = 1;
 
@@ -261,17 +226,12 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 			orDMemWrite = 0;
 		end
 	end else if (wOpCode == `RISCV_OPCODE_OP_IMM) begin
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_ALU;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
 
 		orDMemWrite = 0;
 
@@ -301,24 +261,17 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		end else begin
 			orAluOp = `ALU_OP_ADD;
 
-			orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 			orWriteReg = 0;
 
 			orException = `EXCEPTION_ILLEGAL_INSTR;
 		end
 	end else if (wOpCode == `RISCV_OPCODE_OP) begin
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_ALU;
 		orWriteReg = wRd;
 		orWriteRegImmediate = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 		
-		orAluBSrc = `ALU_B_SOURCE_REG;
-
 		orDMemWrite = 0;
 
 		orException = `EXCEPTION_SUCCESS;
@@ -356,17 +309,13 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		end else begin
 			orAluOp = `ALU_OP_ADD;
 
-			orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 			orWriteReg = 0;
 
 			orException = `EXCEPTION_ILLEGAL_INSTR;
 		end
 	end else begin
 		orAluOp = 0;
-		orAluBSrc = `ALU_B_SOURCE_IMMEDIATE;
-		orBranchInverted = 0;
 
-		orWriteRegSource = `REG_SOURCE_IMMEDIATE;
 		orWriteReg = 0;
 		orWriteRegImmediate = 0;
 
@@ -375,8 +324,6 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		orDMemWrite = 0;
 
 		orNextPcSrc = `NEXT_PC_SRC_SEQ;
-		orNextPcImmediate20 = 0;
-		orNextPcImmediate12 = 0;
 	end
 end
 
