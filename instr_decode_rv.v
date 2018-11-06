@@ -4,7 +4,7 @@ module instr_decode_rv(
 	input wire [31:0]iwInstr,
 	input wire [31:0]iwPc,
 
-	output reg [5:0]orAluOp,
+	output reg [3:0]orAluOp,
 	output wire owAluBSrc,
 	output wire [31:0]owAluBImmediate,
 	output wire owBranchInverted,

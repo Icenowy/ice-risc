@@ -4,7 +4,7 @@ module alu_tb();
 
 reg [31:0]rA;
 reg [31:0]rB;
-reg [5:0]rAluOp;
+reg [3:0]rAluOp;
 
 wire [31:0]wX;
 wire wZero;

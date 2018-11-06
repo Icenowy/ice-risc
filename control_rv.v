@@ -22,7 +22,7 @@ wire wPcUpdate;
 
 reg [31:0]rInstruction;
 
-wire [5:0]wAluOp;
+wire [3:0]wAluOp;
 wire wAluBSrc;
 wire [31:0]wAluBImmediate;
 wire wBranchInverted;
