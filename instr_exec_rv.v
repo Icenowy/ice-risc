@@ -48,7 +48,7 @@ wire [6:0]wFunct7;
 wire [31:0]wImmediate12Extended;
 wire [31:0]wImmediate12SClassExtended;
 
-instr_decode_rv mDecoder(iwInstr, wRs1, wRs2, wRd, wImmediate20,
+instr_split_rv mSplitter(iwInstr, wRs1, wRs2, wRd, wImmediate20,
 			 wImmediate12, wImmediate12SClass,
 			 wOpCode, wFunct3, wFunct7);
 

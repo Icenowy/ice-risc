@@ -1,4 +1,4 @@
-module instr_decode_rv(
+module instr_split_rv(
 	input wire [31:0]iwInstr,
 
 	output wire [4:0]owRs1,
