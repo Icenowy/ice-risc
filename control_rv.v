@@ -51,7 +51,7 @@ wire [19:0]wNextPcImmediate20;
 wire [11:0]wNextPcImmediate12;
 wire wBranchStatus;
 
-wire [3:0]wException;
+wire wnIllegal;
 
 wire [31:0]wNextPc;
 
@@ -78,7 +78,7 @@ instr_exec_rv mInstrExec(iwnRst, rInstruction, wPc, wOldPc, wAluOp, wAluBSrc,
 			 wReadReg2, wWriteReg, wWriteRegSource,
 			 wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
 			 wDMemAccess, wNextPcSrc, wNextPcImmediate20,
-			 wNextPcImmediate12, wException);
+			 wNextPcImmediate12, wnIllegal);
 
 assign wPcUpdate = wnStall;
 
@@ -117,7 +117,7 @@ always @(negedge iwClk or negedge iwnRst) begin
 		rnHalt <= 1;
 	end else begin
 		rInstruction <= iwRead1Data;
-		rnHalt <= wException == `EXCEPTION_SUCCESS;
+		rnHalt <= wnIllegal;
 	end
 end
 

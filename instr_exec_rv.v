@@ -16,15 +16,15 @@ module instr_exec_rv(
 	output wire [1:0]owWriteRegSource,
 	output reg [31:0]orWriteRegImmediate,
 
-	output reg orDMemWrite,
-	output reg orDMemSignExtend,
-	output reg [1:0]orDMemAccess,
+	output wire owDMemWrite,
+	output wire owDMemSignExtend,
+	output wire [1:0]owDMemAccess,
 
 	output wire [1:0]owNextPcSrc,
 	output wire [19:0]owNextPcImmediate20,
 	output wire [11:0]owNextPcImmediate12,
 
-	output reg [3:0]orException
+	output reg ornIllegal
 );
 
 `include "macros/aluops.v"
@@ -72,13 +72,14 @@ assign owBranchInverted = (wFunct3 == `RISCV_FUNCT3_BRANCH_BNE ||
 
 assign owReadReg1 = wRs1;
 assign owReadReg2 = wRs2;
-assign owWriteReg = (wOpCode == `RISCV_OPCODE_LUI ||
-		     wOpCode == `RISCV_OPCODE_AUIPC ||
-		     wOpCode == `RISCV_OPCODE_JAL ||
-		     wOpCode == `RISCV_OPCODE_JALR ||
-		     wOpCode == `RISCV_OPCODE_LOAD ||
-		     wOpCode == `RISCV_OPCODE_OP_IMM ||
-		     wOpCode == `RISCV_OPCODE_OP) ? wRd : 0;
+assign owWriteReg = (!ornIllegal) ? 0 :
+		    ((wOpCode == `RISCV_OPCODE_LUI ||
+		      wOpCode == `RISCV_OPCODE_AUIPC ||
+		      wOpCode == `RISCV_OPCODE_JAL ||
+		      wOpCode == `RISCV_OPCODE_JALR ||
+		      wOpCode == `RISCV_OPCODE_LOAD ||
+		      wOpCode == `RISCV_OPCODE_OP_IMM ||
+		      wOpCode == `RISCV_OPCODE_OP) ? wRd : 0);
 
 assign owWriteRegSource = (wOpCode == `RISCV_OPCODE_OP ||
 			   wOpCode == `RISCV_OPCODE_OP_IMM) ?
@@ -97,10 +98,22 @@ assign owNextPcSrc = (wOpCode == `RISCV_OPCODE_JAL) ?
 		      ((wOpCode == `RISCV_OPCODE_BRANCH) ?
 		       `NEXT_PC_SRC_B : `NEXT_PC_SRC_SEQ));
 
+assign owDMemWrite = (!ornIllegal) ? 0 : wOpCode == `RISCV_OPCODE_STORE;
+
+assign owDMemSignExtended = wFunct3 == `RISCV_FUNCT3_LOAD_LB ||
+			    wFunct3 == `RISCV_FUNCT3_LOAD_LW;
+
+assign owDMemAccess = (wFunct3 == `RISCV_FUNCT3_LOAD_LB || // Also SB
+		       wFunct3 == `RISCV_FUNCT3_LOAD_LBU) ?
+		      `MEM_ACCESS_BYTE :
+		      ((wFunct3 == `RISCV_FUNCT3_LOAD_LH || // Also SH
+		        wFunct3 == `RISCV_FUNCT3_LOAD_LHU) ?
+			`MEM_ACCESS_HALF_WORD : `MEM_ACCESS_WORD);
+
 initial begin
 	orAluOp = 0;
 
-	orException = `EXCEPTION_SUCCESS;
+	ornIllegal = 1;
 
 	orWriteRegImmediate = 0;
 end
@@ -109,40 +122,30 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 	if (!iwnRst) begin
 		orAluOp = 0;
 
-		orException = `EXCEPTION_SUCCESS;
+		ornIllegal = 1;
 
 		orWriteRegImmediate = 0;
 	end else if (wOpCode == `RISCV_OPCODE_LUI) begin
 		orAluOp = 0;
 
 		orWriteRegImmediate = {wImmediate20, 12'h0};
-
-		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_AUIPC) begin
 		orAluOp = 0;
 
 		orWriteRegImmediate = {wImmediate20, 12'h0} + iwOldPc;
-
-		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_JAL) begin
 		orAluOp = 0;
 
 		orWriteRegImmediate = iwOldPc + 4;
-
-		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_JALR &&
 		     wFunct3 == `RISCV_FUNCT3_JALR) begin
 		orAluOp = 0;
 
 		orWriteRegImmediate = iwOldPc + 4;
-
-		orDMemWrite = 0;
 	end else if (wOpCode == `RISCV_OPCODE_BRANCH) begin
 		orWriteRegImmediate = 0;
 		
-		orDMemWrite = 0;
-
-		orException = `EXCEPTION_SUCCESS;
+		ornIllegal = 1;
 
 		if (wFunct3 == `RISCV_FUNCT3_BRANCH_BEQ) begin
 			orAluOp = `ALU_OP_EQ;
@@ -157,7 +160,7 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		end else if (wFunct3 == `RISCV_FUNCT3_BRANCH_BGEU) begin
 			orAluOp = `ALU_OP_SLTU;
 		end else begin
-			orException = `EXCEPTION_ILLEGAL_INSTR;
+			ornIllegal = 0;
 
 			orAluOp = `ALU_OP_ADD;
 		end
@@ -166,55 +169,29 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 
 		orAluOp = `ALU_OP_ADD;
 
-		orDMemWrite = 0;
+		ornIllegal = 1;
 
-		orException = `EXCEPTION_SUCCESS;
-
-		if (wFunct3 == `RISCV_FUNCT3_LOAD_LB) begin
-			orDMemSignExtend = 1;
-			orDMemAccess = `MEM_ACCESS_BYTE;
-		end else if (wFunct3 == `RISCV_FUNCT3_LOAD_LH) begin
-			orDMemSignExtend = 1;
-			orDMemAccess = `MEM_ACCESS_HALF_WORD;
-		end else if (wFunct3 == `RISCV_FUNCT3_LOAD_LW) begin
-			orDMemSignExtend = 0;
-			orDMemAccess = `MEM_ACCESS_WORD;
-		end else if (wFunct3 == `RISCV_FUNCT3_LOAD_LBU) begin
-			orDMemSignExtend = 0;
-			orDMemAccess = `MEM_ACCESS_BYTE;
-		end else if (wFunct3 == `RISCV_FUNCT3_LOAD_LHU) begin
-			orDMemSignExtend = 0;
-			orDMemAccess = `MEM_ACCESS_HALF_WORD;
-		end else begin
-
-			orException = `EXCEPTION_ILLEGAL_INSTR;
-		end
+		if (!(wFunct3 == `RISCV_FUNCT3_LOAD_LB ||
+		      wFunct3 == `RISCV_FUNCT3_LOAD_LH ||
+		      wFunct3 == `RISCV_FUNCT3_LOAD_LW ||
+		      wFunct3 == `RISCV_FUNCT3_LOAD_LBU ||
+		      wFunct3 == `RISCV_FUNCT3_LOAD_LHU))
+			ornIllegal = 0;
 	end else if (wOpCode == `RISCV_OPCODE_STORE) begin
 		orWriteRegImmediate = 0;
 
 		orAluOp = `ALU_OP_ADD;
 
-		orDMemWrite = 1;
+		ornIllegal = 1;
 
-		orException = `EXCEPTION_SUCCESS;
-
-		if (wFunct3 == `RISCV_FUNCT3_STORE_SB) begin
-			orDMemAccess = `MEM_ACCESS_BYTE;
-		end else if (wFunct3 == `RISCV_FUNCT3_STORE_SH) begin
-			orDMemAccess = `MEM_ACCESS_HALF_WORD;
-		end else if (wFunct3 == `RISCV_FUNCT3_STORE_SW) begin
-			orDMemAccess = `MEM_ACCESS_WORD;
-		end else begin
-			orException = `EXCEPTION_ILLEGAL_INSTR;
-
-			orDMemWrite = 0;
-		end
+		if (!(wFunct3 == `RISCV_FUNCT3_STORE_SB ||
+		      wFunct3 == `RISCV_FUNCT3_STORE_SH ||
+		      wFunct3 == `RISCV_FUNCT3_STORE_SW))
+			ornIllegal = 0;
 	end else if (wOpCode == `RISCV_OPCODE_OP_IMM) begin
 		orWriteRegImmediate = 0;
 
-		orDMemWrite = 0;
-
-		orException = `EXCEPTION_SUCCESS;
+		ornIllegal = 1;
 
 		if (wFunct3 == `RISCV_FUNCT3_OP_IMM_ADDI) begin
 			orAluOp = `ALU_OP_ADD;
@@ -240,14 +217,12 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		end else begin
 			orAluOp = `ALU_OP_ADD;
 
-			orException = `EXCEPTION_ILLEGAL_INSTR;
+			ornIllegal = 0;
 		end
 	end else if (wOpCode == `RISCV_OPCODE_OP) begin
 		orWriteRegImmediate = 0;
 		
-		orDMemWrite = 0;
-
-		orException = `EXCEPTION_SUCCESS;
+		ornIllegal = 1;
 
 		if (wFunct3 == `RISCV_FUNCT3_OP_ADD_SUB &&
 		    wFunct7 == `RISCV_FUNCT7_OP_ADD) begin
@@ -282,17 +257,14 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 		end else begin
 			orAluOp = `ALU_OP_ADD;
 
-
-			orException = `EXCEPTION_ILLEGAL_INSTR;
+			ornIllegal = 0;
 		end
 	end else begin
 		orAluOp = 0;
 
 		orWriteRegImmediate = 0;
 
-		orException = `EXCEPTION_ILLEGAL_INSTR;
-
-		orDMemWrite = 0;
+		ornIllegal = 0;
 	end
 end
 endmodule
