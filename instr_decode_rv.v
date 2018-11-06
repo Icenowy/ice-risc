@@ -1,4 +1,4 @@
-module instr_exec_rv(
+module instr_decode_rv(
 	input wire iwnRst,
 
 	input wire [31:0]iwInstr,

@@ -73,12 +73,12 @@ pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
 sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
 				    wDMemSignExtend, wReadDMemResult);
 
-instr_exec_rv mInstrExec(iwnRst, rInstruction, wPc, wOldPc, wAluOp, wAluBSrc,
-			 wAluBImmediate, wBranchInverted, wReadReg1,
-			 wReadReg2, wWriteReg, wWriteRegSource,
-			 wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
-			 wDMemAccess, wNextPcSrc, wNextPcImmediate20,
-			 wNextPcImmediate12, wnIllegal);
+instr_decode_rv mInstrDec(iwnRst, rInstruction, wPc, wOldPc, wAluOp, wAluBSrc,
+			  wAluBImmediate, wBranchInverted, wReadReg1,
+			  wReadReg2, wWriteReg, wWriteRegSource,
+			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
+			  wDMemAccess, wNextPcSrc, wNextPcImmediate20,
+			  wNextPcImmediate12, wnIllegal);
 
 assign wPcUpdate = wnStall;
 
