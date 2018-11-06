@@ -25,7 +25,7 @@ sim.vvp: sim.v simple_memory.vvp ice_risc_rv.vvp
 simple_memory.vvp: simple_memory.v simple_memory_rom.v
 ice_risc_rv.vvp: ice_risc_rv.v control_rv.vvp
 control_rv.vvp: control_rv.v alu.vvp regfile_32.vvp next_pc_rv.vvp pc.vvp sub_word_d_mem_read_rv.vvp instr_exec_rv.vvp
-instr_exec_rv.vvp: instr_exec_rv.v instr_decode_rv.vvp
+instr_exec_rv.vvp: instr_exec_rv.v instr_split_rv.vvp
 
 c.o: c.c
 	$(RISCV_GCC) -march=rv32i -mabi=ilp32 -c $< -o $@
