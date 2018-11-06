@@ -3,7 +3,6 @@ module instr_decode_rv(
 
 	input wire [31:0]iwInstr,
 	input wire [31:0]iwPc,
-	input wire [31:0]iwOldPc,
 
 	output reg [5:0]orAluOp,
 	output wire owAluBSrc,
@@ -118,7 +117,7 @@ initial begin
 	orWriteRegImmediate = 0;
 end
 
-always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc or iwOldPc) begin
+always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc) begin
 	if (!iwnRst) begin
 		orAluOp = 0;
 
@@ -132,16 +131,16 @@ always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate1
 	end else if (wOpCode == `RISCV_OPCODE_AUIPC) begin
 		orAluOp = 0;
 
-		orWriteRegImmediate = {wImmediate20, 12'h0} + iwOldPc;
+		orWriteRegImmediate = {wImmediate20, 12'h0} + iwPc;
 	end else if (wOpCode == `RISCV_OPCODE_JAL) begin
 		orAluOp = 0;
 
-		orWriteRegImmediate = iwOldPc + 4;
+		orWriteRegImmediate = iwPc + 4;
 	end else if (wOpCode == `RISCV_OPCODE_JALR &&
 		     wFunct3 == `RISCV_FUNCT3_JALR) begin
 		orAluOp = 0;
 
-		orWriteRegImmediate = iwOldPc + 4;
+		orWriteRegImmediate = iwPc + 4;
 	end else if (wOpCode == `RISCV_OPCODE_BRANCH) begin
 		orWriteRegImmediate = 0;
 		

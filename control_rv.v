@@ -73,7 +73,7 @@ pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
 sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
 				    wDMemSignExtend, wReadDMemResult);
 
-instr_decode_rv mInstrDec(iwnRst, rInstruction, wPc, wOldPc, wAluOp, wAluBSrc,
+instr_decode_rv mInstrDec(iwnRst, rInstruction, wOldPc, wAluOp, wAluBSrc,
 			  wAluBImmediate, wBranchInverted, wReadReg1,
 			  wReadReg2, wWriteReg, wWriteRegSource,
 			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
