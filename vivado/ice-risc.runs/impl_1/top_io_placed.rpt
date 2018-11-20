@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date                      : Mon Nov 19 19:05:04 2018
+| Date                      : Tue Nov 20 05:10:28 2018
 | Host                      : ice-x230 running 64-bit AOSC OS
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top

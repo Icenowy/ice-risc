@@ -30,15 +30,15 @@ set_property ip_output_repo /home/icenowy/git-repos/ice-risc/vivado/ice-risc.cac
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog {
   /home/icenowy/git-repos/ice-risc/macros/aluops.v
-  /home/icenowy/git-repos/ice-risc/macros/control.v
   /home/icenowy/git-repos/ice-risc/macros/control_rv.v
+  /home/icenowy/git-repos/ice-risc/macros/control.v
   /home/icenowy/git-repos/ice-risc/macros/functions_rv.v
   /home/icenowy/git-repos/ice-risc/macros/opcodes_rv.v
   /home/icenowy/git-repos/ice-risc/simple_memory_rom.v
 }
 set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/aluops.v]
-set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/control.v]
 set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/control_rv.v]
+set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/control.v]
 set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/functions_rv.v]
 set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/macros/opcodes_rv.v]
 set_property file_type "Verilog Header" [get_files /home/icenowy/git-repos/ice-risc/simple_memory_rom.v]
