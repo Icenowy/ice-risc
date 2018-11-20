@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Nov 20 05:11:44 2018
+| Date         : Tue Nov 20 19:41:24 2018
 | Host         : ice-x230 running 64-bit AOSC OS
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 34
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 34         |
+| PDRC-153 | Warning  | Gated clock check                                   | 33         |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -210,11 +210,6 @@ Related violations: <none>
 PDRC-153#33 Warning
 Gated clock check  
 Net mKeyDebouncer/orKeyOut_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin mKeyDebouncer/orKeyOut_reg_LDC_i_1/O, cell mKeyDebouncer/orKeyOut_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#34 Warning
-Gated clock check  
-Net mSimMemory/rnHalt_reg is a gated clock net sourced by a combinational pin mSimMemory/ornIllegal_reg_i_2/O, cell mSimMemory/ornIllegal_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

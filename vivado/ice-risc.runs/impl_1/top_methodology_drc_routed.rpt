@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Nov 20 05:11:52 2018
+| Date         : Tue Nov 20 19:41:31 2018
 | Host         : ice-x230 running 64-bit AOSC OS
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1117
+             Violations found: 1116
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert  | 66         |
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 1000       |
 | TIMING-18 | Warning  | Missing input or output delay | 17         |
-| TIMING-20 | Warning  | Non-clocked latch             | 34         |
+| TIMING-20 | Warning  | Non-clocked latch             | 33         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -5452,170 +5452,165 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mInstrDec/ornIllegal_reg cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mInstrDec/ornIllegal_reg/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[0]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[0]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[0]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[10]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[10]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[10]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[10]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[11]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[11]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[11]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[11]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[12]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[12]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[12]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[12]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[13]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[13]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[13]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[13]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[14]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[14]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[14]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[14]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[15]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[15]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[15]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[15]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[16]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[16]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[16]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[16]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[17]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[17]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[17]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[17]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[18]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[18]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[18]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[18]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[19]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[19]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[19]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[19]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[1]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[1]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[1]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[20]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[20]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[20]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[20]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[21]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[21]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[21]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[21]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[22]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[22]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[22]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[22]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[23]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[23]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[23]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[23]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[24]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[24]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[24]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[24]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[25]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[25]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[25]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[25]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[26]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[26]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[26]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[26]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[27]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[27]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[27]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[27]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[28]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[28]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[28]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[28]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[29]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[29]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[29]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[29]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[2]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[2]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[2]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[30]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[30]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[30]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[30]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[31]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[31]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#26 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[31]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[31]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[3]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[3]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#27 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[3]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[3]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[4]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[4]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#28 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[4]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[4]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[5]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[5]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#29 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[5]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[5]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[6]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[6]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#30 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[6]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[6]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[7]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[7]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#31 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[7]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[7]_LDC/G is not reached by a timing clock
+The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[8]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[8]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#32 Warning
 Non-clocked latch  
-The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[8]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[8]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#33 Warning
-Non-clocked latch  
 The latch mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[9]_LDC cannot be properly analyzed as its control pin mIceRiscRV/mMainControlUnit/mPc/orOldPc_reg[9]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#34 Warning
+TIMING-20#33 Warning
 Non-clocked latch  
 The latch mKeyDebouncer/orKeyOut_reg_LDC cannot be properly analyzed as its control pin mKeyDebouncer/orKeyOut_reg_LDC/G is not reached by a timing clock
 Related violations: <none>
