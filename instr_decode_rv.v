@@ -103,8 +103,8 @@ assign owNextPcSrc = (wOpCode == `RISCV_OPCODE_JAL) ?
 
 assign owDMemWrite = (!ornIllegal) ? 0 : wOpCode == `RISCV_OPCODE_STORE;
 
-assign owDMemSignExtended = wFunct3 == `RISCV_FUNCT3_LOAD_LB ||
-			    wFunct3 == `RISCV_FUNCT3_LOAD_LW;
+assign owDMemSignExtend = wFunct3 == `RISCV_FUNCT3_LOAD_LB ||
+			  wFunct3 == `RISCV_FUNCT3_LOAD_LW;
 
 assign owDMemAccess = (wFunct3 == `RISCV_FUNCT3_LOAD_LB || // Also SB
 		       wFunct3 == `RISCV_FUNCT3_LOAD_LBU) ?
@@ -129,6 +129,7 @@ initial begin
 end
 
 always @(iwnRst or iwInstr or wRd or wImmediate20 or wImmediate12 or wImmediate12SClass or wImmediate12Extended or wImmediate12SClassExtended or wOpCode or wFunct3 or wFunct7 or iwPc) begin
+	ornIllegal = 1;
 	if (!iwnRst) begin
 		orAluOp = 0;
 
