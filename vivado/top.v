@@ -30,7 +30,13 @@ simple_memory mSimMemory(wNewClk, wnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWr
 
 ice_risc_rv mIceRiscRV(wNewClk, wnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data);
 
-always @(iwSw[14] or iwSw[15]) begin
+always @(iwSw[14] or iwSw[15] or mIceRiscRV.mMainControlUnit.wNextPc or
+    mIceRiscRV.mMainControlUnit.wPc or mIceRiscRV.mMainControlUnit.wReadReg1Value or
+    mIceRiscRV.mMainControlUnit.wReadReg1 or
+    mIceRiscRV.mMainControlUnit.wReadReg2Value or
+    mIceRiscRV.mMainControlUnit.wReadReg2 or
+    mIceRiscRV.mMainControlUnit.wWriteRegValue or
+    mIceRiscRV.mMainControlUnit.wAluResult) begin
     if (iwSw[15:14] == 2'b00) begin
         rData[0] = mIceRiscRV.mMainControlUnit.wNextPc[3:0];
         rData[1] = mIceRiscRV.mMainControlUnit.wNextPc[7:4];
