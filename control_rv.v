@@ -2,14 +2,12 @@ module control_rv(
 	input wire iwClk,
 	input wire iwnRst,
 
-	output wire [31:0]owRead1Addr,
-	output wire [31:0]owRead2Addr,
+	output reg [31:0]orReadAddr,
 	output wire [31:0]owWriteAddr,
 	output wire [31:0]owWriteData,
 	output wire [3:0]owWstrb,
 
-	input wire [31:0]iwRead1Data,
-	input wire [31:0]iwRead2Data,
+	input wire [31:0]iwReadData,
 
 	output reg rnHalt
 );
@@ -58,35 +56,50 @@ wire [31:0]wNextPc;
 wire [31:0]wReadDMemData;
 wire [31:0]wReadDMemResult;
 
+wire wExePresent;
+wire wMemPresent;
+wire wWbPresent;
+
 wire wnStall;
+
+wire [31:0]wReadDMemAddr;
+
+reg [2:0]rState;
+reg [2:0]rStateNext;
+
+reg [31:0]rAluResult;
+reg [31:0]rReadReg1Value;
+reg [31:0]rReadReg2Value;
+reg [31:0]rReadData;
 
 alu mAlu(wAluA, wAluB, wAluOp, wAluZero, wAluSign, wAluResult);
 
 regfile_32 mRegFile(iwClk, iwnRst, wRegWriteEnable, wReadReg1, wReadReg2,
 		    wWriteReg, wReadReg1Value, wReadReg2Value, wWriteRegValue);
 
-next_pc_rv mNextPc(wNextPcSrc, wPc, wReadReg1Value, wNextPcImmediate20,
+next_pc_rv mNextPc(wNextPcSrc, wPc, rReadReg1Value, wNextPcImmediate20,
 		   wNextPcImmediate12, wBranchStatus, wNextPc);
 
 pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
 
-sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
+sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, wReadDMemAddr, wDMemAccess,
 				    wDMemSignExtend, wReadDMemResult);
 
-instr_decode_rv mInstrDec(iwnRst, rInstruction, wOldPc, wAluOp, wAluBSrc,
+instr_decode_rv mInstrDec(iwnRst, rInstruction, wPc, wAluOp, wAluBSrc,
 			  wAluBImmediate, wBranchInverted, wReadReg1,
 			  wReadReg2, wWriteReg, wWriteRegSource,
 			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
 			  wDMemAccess, wNextPcSrc, wNextPcImmediate20,
-			  wNextPcImmediate12, wnIllegal);
+			  wNextPcImmediate12, wExePresent, wMemPresent,
+			  wWbPresent, wnIllegal);
 
-assign wPcUpdate = wnStall;
+assign wPcUpdate = wnStall && rStateNext == `STATE_IF;
 
-assign wAluA = wReadReg1Value;
+assign wAluA = rReadReg1Value;
 assign wAluB = (wAluBSrc == `ALU_B_SOURCE_REG ) ?
-	       wReadReg2Value : wAluBImmediate;
+	       rReadReg2Value : wAluBImmediate;
 
-assign wWriteRegValue = (wWriteRegSource == `REG_SOURCE_ALU) ? wAluResult :
+assign wWriteRegValue = (wWriteRegSource == `REG_SOURCE_ALU) ? rAluResult :
 			((wWriteRegSource == `REG_SOURCE_MEMORY) ?
 			 wReadDMemResult : wWriteRegImmediate);
 
@@ -94,21 +107,54 @@ assign wBranchStatus = (~wAluZero) ^ wBranchInverted;
 
 assign wnStall = rnHalt;
 
-assign wRegWriteEnable = wnStall;
+assign wRegWriteEnable = wnStall && (rState == `STATE_WB || (rState == `STATE_ID && wWriteRegSource == `REG_SOURCE_IMMEDIATE));
 
-assign owRead1Addr = wPc;
-assign owRead2Addr = {wAluResult[31:2], 2'b00};
-assign wReadDMemData = iwRead2Data;
+assign wReadDMemAddr = {wAluResult[31:2], 2'b00};
+assign wReadDMemData = rReadData;
 
-assign owWriteAddr = wAluResult;
-assign owWriteData = wReadReg2Value;
-assign owWstrb = (!wDMemWrite) ? 0 : 
+assign owWriteAddr = rAluResult;
+assign owWriteData = rReadReg2Value;
+assign owWstrb = (!(wDMemWrite && rState == `STATE_MEM)) ? 0 : 
 		 ((wDMemAccess == `MEM_ACCESS_BYTE) ? 4'b0001 :
 		  ((wDMemAccess == `MEM_ACCESS_HALF_WORD) ? 4'b0011 : 4'b1111));
 
 initial begin
 	rInstruction <= 32'h00000013; /* Normalized NOP */
 	rnHalt <= 1;
+	rState <= `STATE_IF;
+	rStateNext <= `STATE_IF;
+end
+
+always @(posedge iwClk or negedge iwnRst) begin
+	if (!iwnRst) begin
+		rState <= `STATE_IF;
+		rStateNext <= `STATE_IF;
+	end else begin
+		if (wnStall) begin
+			rState <= rStateNext;
+			if (rStateNext == `STATE_IF)
+				orReadAddr <= wNextPc;
+			if (rStateNext == `STATE_MEM)
+				orReadAddr <= {wAluResult[31:2], 2'b00};
+			case (rStateNext)
+			`STATE_IF: rStateNext <= `STATE_ID;
+			`STATE_ID: rStateNext <= wExePresent ? `STATE_EXE :
+						 (wMemPresent ? `STATE_MEM :
+						  (wWbPresent ? `STATE_WB :
+						   `STATE_IF));
+			`STATE_EXE: rStateNext <= wMemPresent ? `STATE_MEM :
+						  (wWbPresent ? `STATE_WB :
+						  `STATE_IF);
+			`STATE_MEM: rStateNext <= wWbPresent ? `STATE_WB :
+						 `STATE_IF;
+			`STATE_WB: rStateNext <= `STATE_IF;
+			endcase
+			rReadReg1Value <= wReadReg1Value;
+			rReadReg2Value <= wReadReg2Value;
+		end else begin
+			rStateNext <= rState;
+		end
+	end
 end
 
 always @(negedge iwClk or negedge iwnRst) begin
@@ -116,8 +162,14 @@ always @(negedge iwClk or negedge iwnRst) begin
 		rInstruction <= 32'h00000013; /* Normalized NOP */
 		rnHalt <= 1;
 	end else begin
-		rInstruction <= iwRead1Data;
-		rnHalt <= wnIllegal;
+		if (rState == `STATE_IF)
+			rInstruction <= iwReadData;
+		if (rState == `STATE_ID && rnHalt)
+			rnHalt <= wnIllegal;
+		if (rState == `STATE_EXE)
+			rAluResult <= wAluResult;
+		if (rState == `STATE_MEM)
+			rReadData <= iwReadData;
 	end
 end
 
