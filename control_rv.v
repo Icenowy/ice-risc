@@ -56,6 +56,7 @@ wire [31:0]wNextPc;
 wire [31:0]wReadDMemData;
 wire [31:0]wReadDMemResult;
 
+wire wExePresent;
 wire wMemPresent;
 wire wWbPresent;
 
@@ -89,7 +90,8 @@ instr_decode_rv mInstrDec(iwnRst, rInstruction, wPc, wAluOp, wAluBSrc,
 			  wReadReg2, wWriteReg, wWriteRegSource,
 			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
 			  wDMemAccess, wNextPcSrc, wNextPcImmediate20,
-			  wNextPcImmediate12, wMemPresent, wWbPresent, wnIllegal);
+			  wNextPcImmediate12, wExePresent, wMemPresent,
+			  wWbPresent, wnIllegal);
 
 assign wPcUpdate = wnStall && rStateNext == `STATE_IF;
 
@@ -105,7 +107,7 @@ assign wBranchStatus = (~wAluZero) ^ wBranchInverted;
 
 assign wnStall = rnHalt;
 
-assign wRegWriteEnable = wnStall && rState == `STATE_WB;
+assign wRegWriteEnable = wnStall && (rState == `STATE_WB || (rState == `STATE_ID && wWriteRegSource == `REG_SOURCE_IMMEDIATE));
 
 assign wReadDMemAddr = {wAluResult[31:2], 2'b00};
 assign wReadDMemData = rReadData;
@@ -136,7 +138,10 @@ always @(posedge iwClk or negedge iwnRst) begin
 				orReadAddr <= {wAluResult[31:2], 2'b00};
 			case (rStateNext)
 			`STATE_IF: rStateNext <= `STATE_ID;
-			`STATE_ID: rStateNext <= `STATE_EXE;
+			`STATE_ID: rStateNext <= wExePresent ? `STATE_EXE :
+						 (wMemPresent ? `STATE_MEM :
+						  (wWbPresent ? `STATE_WB :
+						   `STATE_IF));
 			`STATE_EXE: rStateNext <= wMemPresent ? `STATE_MEM :
 						  (wWbPresent ? `STATE_WB :
 						  `STATE_IF);
@@ -159,7 +164,7 @@ always @(negedge iwClk or negedge iwnRst) begin
 	end else begin
 		if (rState == `STATE_IF)
 			rInstruction <= iwReadData;
-		if (rState == `STATE_ID)
+		if (rState == `STATE_ID && rnHalt)
 			rnHalt <= wnIllegal;
 		if (rState == `STATE_EXE)
 			rAluResult <= wAluResult;

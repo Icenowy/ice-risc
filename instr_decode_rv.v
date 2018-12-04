@@ -23,6 +23,7 @@ module instr_decode_rv(
 	output wire [19:0]owNextPcImmediate20,
 	output wire [11:0]owNextPcImmediate12,
 
+	output wire owExePresent,
 	output wire owMemPresent,
 	output wire owWbPresent,
 
@@ -112,10 +113,11 @@ assign owDMemAccess = (wFunct3 == `RISCV_FUNCT3_LOAD_LB || // Also SB
 		        wFunct3 == `RISCV_FUNCT3_LOAD_LHU) ?
 			`MEM_ACCESS_HALF_WORD : `MEM_ACCESS_WORD);
 
+assign owExePresent = wOpCode == `RISCV_OPCODE_BRANCH || wOpCode == `RISCV_OPCODE_LOAD ||
+		      wOpCode == `RISCV_OPCODE_STORE || wOpCode == `RISCV_OPCODE_OP_IMM ||
+		      wOpCode == `RISCV_OPCODE_OP;
 assign owMemPresent = wOpCode == `RISCV_OPCODE_LOAD || wOpCode == `RISCV_OPCODE_STORE;
-assign owWbPresent = wOpCode == `RISCV_OPCODE_LUI || wOpCode == `RISCV_OPCODE_AUIPC ||
-		     wOpCode == `RISCV_OPCODE_JAL || wOpCode == `RISCV_OPCODE_JALR ||
-		     wOpCode == `RISCV_OPCODE_LOAD || wOpCode == `RISCV_OPCODE_OP_IMM ||
+assign owWbPresent = wOpCode == `RISCV_OPCODE_LOAD || wOpCode == `RISCV_OPCODE_OP_IMM ||
 		     wOpCode == `RISCV_OPCODE_OP;
 
 initial begin
