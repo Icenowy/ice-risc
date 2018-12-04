@@ -144,7 +144,6 @@ always @(posedge iwClk or negedge iwnRst) begin
 						 `STATE_IF;
 			`STATE_WB: rStateNext <= `STATE_IF;
 			endcase
-			rAluResult <= wAluResult;
 			rReadReg1Value <= wReadReg1Value;
 			rReadReg2Value <= wReadReg2Value;
 		end else begin
@@ -162,6 +161,8 @@ always @(negedge iwClk or negedge iwnRst) begin
 			rInstruction <= iwReadData;
 		if (rState == `STATE_ID)
 			rnHalt <= wnIllegal;
+		if (rState == `STATE_EXE)
+			rAluResult <= wAluResult;
 		if (rState == `STATE_MEM)
 			rReadData <= iwReadData;
 	end
