@@ -15,13 +15,12 @@ module control_rv(
 );
 
 `include "macros/control.v"
-`include "macros/control_rv.v"
 
 wire [31:0]wPc;
 wire [31:0]wOldPc;
 wire wPcUpdate;
 
-wire [31:0]wInstruction;
+reg [31:0]rInstruction;
 
 wire [3:0]wAluOp;
 wire wAluBSrc;
@@ -48,7 +47,6 @@ wire wDMemSignExtend;
 wire [1:0]wDMemAccess;
 
 wire [1:0]wNextPcSrc;
-reg [1:0]rNextPcSrc;
 wire [19:0]wNextPcImmediate20;
 wire [11:0]wNextPcImmediate12;
 wire wBranchStatus;
@@ -67,7 +65,7 @@ alu mAlu(wAluA, wAluB, wAluOp, wAluZero, wAluSign, wAluResult);
 regfile_32 mRegFile(iwClk, iwnRst, wRegWriteEnable, wReadReg1, wReadReg2,
 		    wWriteReg, wReadReg1Value, wReadReg2Value, wWriteRegValue);
 
-next_pc_rv mNextPc(rNextPcSrc, wPc, wReadReg1Value, wNextPcImmediate20,
+next_pc_rv mNextPc(wNextPcSrc, wPc, wReadReg1Value, wNextPcImmediate20,
 		   wNextPcImmediate12, wBranchStatus, wNextPc);
 
 pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
@@ -75,7 +73,7 @@ pc mPc(iwClk, iwnRst, wPcUpdate, wNextPc, wPc, wOldPc);
 sub_word_d_mem_read_rv mSubWordRead(wReadDMemData, owRead2Addr, wDMemAccess,
 				    wDMemSignExtend, wReadDMemResult);
 
-instr_decode_rv mInstrDec(iwnRst, wInstruction, wOldPc, wAluOp, wAluBSrc,
+instr_decode_rv mInstrDec(iwnRst, rInstruction, wOldPc, wAluOp, wAluBSrc,
 			  wAluBImmediate, wBranchInverted, wReadReg1,
 			  wReadReg2, wWriteReg, wWriteRegSource,
 			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
@@ -108,18 +106,17 @@ assign owWstrb = (!wDMemWrite) ? 0 :
 		 ((wDMemAccess == `MEM_ACCESS_BYTE) ? 4'b0001 :
 		  ((wDMemAccess == `MEM_ACCESS_HALF_WORD) ? 4'b0011 : 4'b1111));
 
-assign wInstruction = iwRead1Data;
-
 initial begin
+	rInstruction <= 32'h00000013; /* Normalized NOP */
 	rnHalt <= 1;
 end
 
 always @(negedge iwClk or negedge iwnRst) begin
 	if (!iwnRst) begin
-		rNextPcSrc <= `NEXT_PC_SRC_SEQ;
+		rInstruction <= 32'h00000013; /* Normalized NOP */
 		rnHalt <= 1;
 	end else begin
-		rNextPcSrc <= wNextPcSrc;
+		rInstruction <= iwRead1Data;
 		rnHalt <= wnIllegal;
 	end
 end
