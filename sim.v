@@ -2,22 +2,20 @@
 
 module sim();
 
-wire [31:0]wRead1Addr;
-wire [31:0]wRead2Addr;
+wire [31:0]wReadAddr;
 wire [31:0]wWriteAddr;
 wire [31:0]wWriteData;
 wire [3:0]wWstrb;
 
-wire [31:0]wRead1Data;
-wire [31:0]wRead2Data;
+wire [31:0]wReadData;
 wire [31:0]wLastData;
 
 reg rClk;
 reg rnRst;
 
-simple_memory mSimMemory(rClk, rnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data, wLastData);
+simple_memory mSimMemory(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
-ice_risc_rv mIceRiscRV(rClk, rnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data);
+ice_risc_rv mIceRiscRV(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 
 initial begin
 	$dumpfile("sim.vcd");

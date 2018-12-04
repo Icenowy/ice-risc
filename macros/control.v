@@ -33,3 +33,16 @@
 `define EXCEPTION_ILLEGAL_INSTR	4'b0001
 `define EXCEPTION_UNALIGNED	4'b0010
 `define EXCEPTION_HALT		4'b0011
+
+/*
+ * 3'b000 - IF state (Instruction Fetch)
+ * 3'b001 - ID state (Instruction Decode)
+ * 3'b002 - EXE state (EXEcution)
+ * 3'b003 - MEM state (MEMory access)
+ * 3'b004 - WB state (Write Back)
+ */
+`define STATE_IF		3'b000
+`define STATE_ID		3'b001
+`define STATE_EXE		3'b010
+`define STATE_MEM		3'b011
+`define STATE_WB		3'b100

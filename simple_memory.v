@@ -4,26 +4,20 @@ module simple_memory#(
 	input wire iwClk,
 	input wire iwnRst,
 
-	input wire [31:0]iwRead1Addr,
-	input wire [31:0]iwRead2Addr,
+	input wire [31:0]iwReadAddr,
 	input wire [31:0]iwWriteAddr,
 	input wire [31:0]iwWriteData,
 	input wire [3:0]iwWstrb,
 
-	output wire [31:0]owRead1Data,
-	output wire [31:0]owRead2Data,
+	output wire [31:0]owReadData,
 	output wire [31:0]owLastData
 );
 reg [7:0]rMemory[0:pWords * 4 - 1];
 
-assign owRead1Data[7:0] = rMemory[iwRead1Addr];
-assign owRead1Data[15:8] = rMemory[iwRead1Addr + 1];
-assign owRead1Data[23:16] = rMemory[iwRead1Addr + 2];
-assign owRead1Data[31:24] = rMemory[iwRead1Addr + 3];
-assign owRead2Data[7:0] = rMemory[iwRead2Addr];
-assign owRead2Data[15:8] = rMemory[iwRead2Addr + 1];
-assign owRead2Data[23:16] = rMemory[iwRead2Addr + 2];
-assign owRead2Data[31:24] = rMemory[iwRead2Addr + 3];
+assign owReadData[7:0] = rMemory[iwReadAddr];
+assign owReadData[15:8] = rMemory[iwReadAddr + 1];
+assign owReadData[23:16] = rMemory[iwReadAddr + 2];
+assign owReadData[31:24] = rMemory[iwReadAddr + 3];
 
 assign owLastData[7:0] = rMemory[pWords * 4 - 4];
 assign owLastData[15:8] = rMemory[pWords * 4 - 3];
