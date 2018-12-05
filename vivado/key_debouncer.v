@@ -31,7 +31,8 @@ module key_debouncer#(
 );
 
 initial begin
-    orKeyOut <= iwKeyIn;
+    rCountLow <= 0;
+    rCountHigh <= 0;
 end
 
 reg [31:0]rCountLow;
