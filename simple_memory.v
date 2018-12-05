@@ -1,5 +1,5 @@
 module simple_memory#(
-	parameter [ 31:0] pWords = 32'd128
+	parameter [ 31:0] pWords = 32'd44
 )(
 	input wire iwClk,
 	input wire iwnRst,
