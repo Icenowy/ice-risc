@@ -1,0 +1,19 @@
+read_verilog ./instr_split_rv.v
+read_verilog ./ice_risc_rv.v
+read_verilog ./simple_memory.v
+read_verilog ./instr_decode_rv.v
+read_verilog ./regfile_32.v
+read_verilog ./sign_extend_12_32.v
+read_verilog ./top.v
+read_verilog ./clock_divider.v
+read_verilog ./pc.v
+read_verilog ./next_pc_rv.v
+read_verilog ./sub_word_d_mem_read_rv.v
+read_verilog ./sign_extend_16_32.v
+read_verilog ./control_rv.v
+read_verilog ./sign_extend_13_32.v
+read_verilog ./alu.v
+read_verilog ./sign_extend_8_32.v
+read_verilog ./sign_extend_21_32.v
+synth_anlogic -top top
+write_verilog full.v

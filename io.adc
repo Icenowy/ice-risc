@@ -1,0 +1,6 @@
+set_pin_assignment {iwClk24M} { LOCATION = K14; }
+set_pin_assignment {iwnKey} { LOCATION = K16; }
+set_pin_assignment {ownLed[0]} { LOCATION = R3; }
+set_pin_assignment {ownLed[0]} { LOCATION = J14; }
+set_pin_assignment {ownLed[0]} { LOCATION = P13; }
+
