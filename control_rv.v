@@ -148,6 +148,7 @@ always @(posedge iwClk or negedge iwnRst) begin
 			`STATE_MEM: rStateNext <= wWbPresent ? `STATE_WB :
 						 `STATE_IF;
 			`STATE_WB: rStateNext <= `STATE_IF;
+			default: rStateNext <= `STATE_IF;
 			endcase
 			rReadReg1Value <= wReadReg1Value;
 			rReadReg2Value <= wReadReg2Value;
