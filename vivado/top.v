@@ -6,14 +6,12 @@ module top(
     output wire [3:0] ownAn
 );
 
-wire [31:0]wRead1Addr;
-wire [31:0]wRead2Addr;
+wire [31:0]wReadAddr;
 wire [31:0]wWriteAddr;
 wire [31:0]wWriteData;
 wire [3:0]wWstrb;
 
-wire [31:0]wRead1Data;
-wire [31:0]wRead2Data;
+wire [31:0]wReadData;
 wire [31:0]wLastData;
 
 wire wnRst = ~iwSw[0];
@@ -26,9 +24,9 @@ key_debouncer mKeyDebouncer(iwClk100M, wnRst, iwKey, wNewClk);
 
 digital_display_driver mDisplayDriver(iwClk100M, wnRst, rData[0], rData[1], rData[2], rData[3], ownSeg, ownAn);
 
-simple_memory mSimMemory(wNewClk, wnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data, wLastData);
+simple_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
-ice_risc_rv mIceRiscRV(wNewClk, wnRst, wRead1Addr, wRead2Addr, wWriteAddr, wWriteData, wWstrb, wRead1Data, wRead2Data);
+ice_risc_rv mIceRiscRV(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 
 always @(iwSw[14] or iwSw[15] or mIceRiscRV.mMainControlUnit.wNextPc or
     mIceRiscRV.mMainControlUnit.wPc or mIceRiscRV.mMainControlUnit.wReadReg1Value or
@@ -36,8 +34,15 @@ always @(iwSw[14] or iwSw[15] or mIceRiscRV.mMainControlUnit.wNextPc or
     mIceRiscRV.mMainControlUnit.wReadReg2Value or
     mIceRiscRV.mMainControlUnit.wReadReg2 or
     mIceRiscRV.mMainControlUnit.wWriteRegValue or
-    mIceRiscRV.mMainControlUnit.wAluResult) begin
-    if (iwSw[15:14] == 2'b00) begin
+    mIceRiscRV.mMainControlUnit.wAluResult or
+    mIceRiscRV.mMainControlUnit.rState or
+    mIceRiscRV.mMainControlUnit.rStateNext) begin
+    if (iwSw[13] == 2'b1) begin
+        rData[0] = {1'b0, mIceRiscRV.mMainControlUnit.rStateNext[2:0]};
+        rData[1] = 0;
+        rData[2] = {1'b0, mIceRiscRV.mMainControlUnit.rState[2:0]};
+        rData[3] = 0;
+    end else if (iwSw[15:14] == 2'b00) begin
         rData[0] = mIceRiscRV.mMainControlUnit.wNextPc[3:0];
         rData[1] = mIceRiscRV.mMainControlUnit.wNextPc[7:4];
         rData[2] = mIceRiscRV.mMainControlUnit.wPc[3:0];
