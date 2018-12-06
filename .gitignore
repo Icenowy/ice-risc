@@ -15,3 +15,7 @@ gen_simple_memory_rom.o
 td_*.log
 full.v
 ice_risc.bit
+*.area
+*.db
+.*.al.bak
+*.bit
