@@ -16,9 +16,11 @@ wire wnRst = iwnKey;
 
 wire wNewClk;
 
-clock_divider mClockDivider(iwClk24M, wnRst, wNewClk);
+clock_divider #(
+	.pFactor(32'd262144)
+)mClockDivider(iwClk24M, wnRst, wNewClk);
 
-simple_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
+dram_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
 ice_risc_rv mIceRiscRV(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 
