@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Nov 20 19:29:41 2018
-# Process ID: 11402
+# Start of session at: Sun Dec  9 20:30:28 2018
+# Process ID: 35377
 # Current directory: /home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1/top.vds
@@ -15,16 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11408 
+INFO: Helper process launched with PID 35406 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.215 ; gain = 74.629 ; free physical = 3163 ; free virtual = 5622
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.219 ; gain = 74.629 ; free physical = 310 ; free virtual = 4678
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/icenowy/git-repos/ice-risc/vivado/top.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_debouncer' [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:23]
 	Parameter pClockDividerFactor bound to: 32'b00000000000011110100001001000000 
 	Parameter pSampleTime bound to: 32'b00000000000000000000000000001111 
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:34]
-WARNING: [Synth 8-5788] Register orKeyOut_reg in module key_debouncer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:43]
+WARNING: [Synth 8-5788] Register orKeyOut_reg in module key_debouncer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:44]
 INFO: [Synth 8-6155] done synthesizing module 'key_debouncer' (1#1) [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:23]
 INFO: [Synth 8-6157] synthesizing module 'digital_display_driver' [/home/icenowy/git-repos/ice-risc/vivado/digital_display_driver.v:1]
 	Parameter pClockDividerFactor bound to: 32'b00000000000000000000010000000000 
@@ -34,105 +33,105 @@ INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [/home/iceno
 INFO: [Synth 8-6155] done synthesizing module 'digital_display_driver' (3#1) [/home/icenowy/git-repos/ice-risc/vivado/digital_display_driver.v:1]
 INFO: [Synth 8-6157] synthesizing module 'simple_memory' [/home/icenowy/git-repos/ice-risc/simple_memory.v:1]
 	Parameter pWords bound to: 128 - type: integer 
-WARNING: [Synth 8-5788] Register rMemory_reg[0] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[1] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[2] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[3] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[4] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[5] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[6] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[7] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[8] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[9] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[10] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[11] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[12] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[13] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[14] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[15] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[16] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[17] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[18] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[19] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[20] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[21] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[22] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[23] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[24] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[25] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[26] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[27] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[28] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[29] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[30] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[31] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[32] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[33] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[34] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[35] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[36] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[37] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[38] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[39] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[40] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[41] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[42] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[43] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[44] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[45] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[46] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[47] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[48] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[49] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[50] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[51] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[52] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[53] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[54] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[55] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[56] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[57] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[58] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[59] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[60] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[61] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[62] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[63] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[64] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[65] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[66] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[67] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[68] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[69] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[70] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[71] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[72] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[73] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[74] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[75] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[76] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[77] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[78] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[79] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[80] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[81] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[82] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[83] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[84] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[85] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[86] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[87] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[88] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[89] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[90] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[91] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[92] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[93] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[94] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[95] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[96] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[97] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
-WARNING: [Synth 8-5788] Register rMemory_reg[98] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:19]
+WARNING: [Synth 8-5788] Register rMemory_reg[0] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[1] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[2] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[3] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[4] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[5] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[6] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[7] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[8] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[9] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[10] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[11] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[12] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[13] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[14] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[15] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[16] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[17] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[18] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[19] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[20] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[21] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[22] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[23] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[24] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[25] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[26] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[27] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[28] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[29] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[30] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[31] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[32] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[33] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[34] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[35] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[36] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[37] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[38] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[39] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[40] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[41] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[42] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[43] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[44] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[45] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[46] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[47] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[48] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[49] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[50] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[51] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[52] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[53] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[54] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[55] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[56] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[57] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[58] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[59] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[60] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[61] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[62] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[63] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[64] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[65] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[66] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[67] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[68] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[69] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[70] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[71] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[72] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[73] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[74] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[75] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[76] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[77] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[78] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[79] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[80] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[81] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[82] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[83] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[84] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[85] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[86] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[87] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[88] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[89] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[90] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[91] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[92] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[93] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[94] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[95] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[96] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[97] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[98] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 INFO: [Common 17-14] Message 'Synth 8-5788' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'simple_memory' (4#1) [/home/icenowy/git-repos/ice-risc/simple_memory.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ice_risc_rv' [/home/icenowy/git-repos/ice-risc/ice_risc_rv.v:1]
@@ -164,14 +163,16 @@ INFO: [Synth 8-6155] done synthesizing module 'instr_split_rv' (15#1) [/home/ice
 INFO: [Synth 8-6155] done synthesizing module 'instr_decode_rv' (16#1) [/home/icenowy/git-repos/ice-risc/instr_decode_rv.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'control_rv' (17#1) [/home/icenowy/git-repos/ice-risc/control_rv.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'ice_risc_rv' (18#1) [/home/icenowy/git-repos/ice-risc/ice_risc_rv.v:1]
-WARNING: [Synth 8-567] referenced signal 'wNextPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wReadReg1Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wReadReg1' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wReadReg2Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wReadReg2' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wWriteRegValue' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
-WARNING: [Synth 8-567] referenced signal 'wAluResult' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:33]
+WARNING: [Synth 8-567] referenced signal 'rStateNext' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'rState' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wNextPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wReadReg1Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wReadReg1' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wReadReg2Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wReadReg2' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wWriteRegValue' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
+WARNING: [Synth 8-567] referenced signal 'wAluResult' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [/home/icenowy/git-repos/ice-risc/vivado/top.v:1]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[31]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[30]
@@ -203,53 +204,29 @@ WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAdd
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[4]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[3]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[2]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[31]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[30]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[29]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[28]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[27]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[26]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[25]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[24]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[23]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[22]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[21]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[20]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[19]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[18]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[17]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[16]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[15]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[14]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[13]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[12]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[11]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[10]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead1Addr[9]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[31]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[30]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[29]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[28]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[27]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[26]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[25]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[24]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[23]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[22]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[21]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[20]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[19]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[18]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[17]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[16]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[15]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[14]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[13]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[12]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[11]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[10]
-WARNING: [Synth 8-3331] design simple_memory has unconnected port iwRead2Addr[9]
-WARNING: [Synth 8-3331] design top has unconnected port iwSw[13]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[31]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[30]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[29]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[28]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[27]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[26]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[25]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[24]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[23]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[22]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[21]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[20]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[19]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[18]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[17]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[16]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[15]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[14]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[13]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[12]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[11]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[10]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[9]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[12]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[11]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[10]
@@ -263,7 +240,7 @@ WARNING: [Synth 8-3331] design top has unconnected port iwSw[3]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[2]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1569.410 ; gain = 284.824 ; free physical = 3004 ; free virtual = 5465
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 190 ; free virtual = 4540
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -276,10 +253,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1569.410 ; gain = 284.824 ; free physical = 3034 ; free virtual = 5496
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 221 ; free virtual = 4571
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1569.410 ; gain = 284.824 ; free physical = 3034 ; free virtual = 5496
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 221 ; free virtual = 4571
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -299,22 +276,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1900.691 ; gain = 0.000 ; free physical = 2708 ; free virtual = 5169
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1895.703 ; gain = 0.000 ; free physical = 126 ; free virtual = 4251
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1900.691 ; gain = 616.105 ; free physical = 2859 ; free virtual = 5320
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 275 ; free virtual = 4399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1900.691 ; gain = 616.105 ; free physical = 2859 ; free virtual = 5320
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 275 ; free virtual = 4399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1900.691 ; gain = 616.105 ; free physical = 2861 ; free virtual = 5322
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 277 ; free virtual = 4401
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "orKeyOut" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "orKeyOut" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -452,22 +429,24 @@ INFO: [Synth 8-5546] ROM "rRegFile_reg[0]" won't be mapped to RAM because it is 
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/icenowy/git-repos/ice-risc/next_pc_rv.v:39]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/icenowy/git-repos/ice-risc/next_pc_rv.v:37]
 INFO: [Synth 8-5546] ROM "owWriteRegSource0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "rInstruction" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rAluResult" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rReadData" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:25 ; elapsed = 00:03:39 . Memory (MB): peak = 1900.691 ; gain = 616.105 ; free physical = 2729 ; free virtual = 5204
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:19 ; elapsed = 00:03:35 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 168 ; free virtual = 4292
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     22482|
-|2     |simple_memory__GB1 |           1|     16352|
-|3     |simple_memory__GB2 |           1|     15300|
-|4     |simple_memory__GB3 |           1|     18188|
-|5     |simple_memory__GB4 |           1|     23200|
-|6     |simple_memory__GB5 |           1|     30779|
-|7     |simple_memory__GB6 |           1|     39550|
-|8     |top__GC0           |           1|      9885|
+|1     |simple_memory__GB0 |           1|     40245|
+|2     |simple_memory__GB1 |           1|     12131|
+|3     |simple_memory__GB2 |           1|     15467|
+|4     |simple_memory__GB3 |           1|     21361|
+|5     |simple_memory__GB4 |           1|     26263|
+|6     |simple_memory__GB5 |           1|     34032|
+|7     |top__GC0           |           1|     10295|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -481,12 +460,13 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 35    
+	               32 Bit    Registers := 41    
 	                8 Bit    Registers := 512   
-	                2 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 13    
+	   2 Input     32 Bit        Muxes := 14    
 	  33 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 1     
@@ -495,15 +475,16 @@ Detailed RTL Component Info :
 	   3 Input      8 Bit        Muxes := 207   
 	   2 Input      5 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 8     
-	   2 Input      4 Bit        Muxes := 12    
+	   2 Input      4 Bit        Muxes := 16    
 	  10 Input      4 Bit        Muxes := 1     
 	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  12 Input      3 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 17    
 	   2 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 2869  
-	   3 Input      1 Bit        Muxes := 256   
+	   2 Input      1 Bit        Muxes := 2873  
+	   3 Input      1 Bit        Muxes := 257   
 	   7 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -517,6 +498,7 @@ Module top
 Detailed RTL Component Info : 
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 4     
 Module simple_memory 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -609,12 +591,17 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	                2 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -631,7 +618,6 @@ INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design top has unconnected port iwSw[13]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[12]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[11]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[10]
@@ -642,71 +628,94 @@ WARNING: [Synth 8-3331] design top has unconnected port iwSw[6]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[5]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[4]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[3]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[2]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[1]
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[31]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[30]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[29]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[28]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[27]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[26]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[25]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[24]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[23]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[22]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[21]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[20]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[19]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[18]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[17]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[16]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[15]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[14]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[13]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[12]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[11]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[10]
+WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[9]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:19 ; elapsed = 00:07:42 . Memory (MB): peak = 1904.613 ; gain = 620.027 ; free physical = 817 ; free virtual = 3341
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:51 ; elapsed = 00:07:31 . Memory (MB): peak = 1899.625 ; gain = 615.035 ; free physical = 441 ; free virtual = 2629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     14429|
-|2     |simple_memory__GB1 |           1|     12256|
-|3     |simple_memory__GB2 |           1|      4538|
-|4     |simple_memory__GB3 |           1|      4617|
-|5     |simple_memory__GB4 |           1|      5876|
-|6     |simple_memory__GB5 |           1|      5089|
-|7     |simple_memory__GB6 |           1|      5461|
-|8     |top__GC0           |           1|      6428|
+|1     |simple_memory__GB0 |           1|     19523|
+|2     |simple_memory__GB1 |           1|      3817|
+|3     |simple_memory__GB2 |           1|      4187|
+|4     |simple_memory__GB3 |           1|      4231|
+|5     |simple_memory__GB4 |           1|      6490|
+|6     |simple_memory__GB5 |           1|      4380|
+|7     |top__GC0           |           1|      6460|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:27 ; elapsed = 00:07:52 . Memory (MB): peak = 1904.613 ; gain = 620.027 ; free physical = 682 ; free virtual = 3233
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:59 ; elapsed = 00:07:42 . Memory (MB): peak = 1899.625 ; gain = 615.035 ; free physical = 298 ; free virtual = 2523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:34 ; elapsed = 00:08:00 . Memory (MB): peak = 1950.543 ; gain = 665.957 ; free physical = 642 ; free virtual = 3199
+Finished Timing Optimization : Time (s): cpu = 00:06:06 ; elapsed = 00:07:50 . Memory (MB): peak = 1964.297 ; gain = 679.707 ; free physical = 224 ; free virtual = 2470
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     14429|
-|2     |simple_memory__GB1 |           1|      4064|
-|3     |simple_memory__GB2 |           1|      4537|
-|4     |simple_memory__GB3 |           1|      4617|
-|5     |simple_memory__GB4 |           1|      5876|
-|6     |simple_memory__GB5 |           1|      5089|
-|7     |simple_memory__GB6 |           1|      5461|
-|8     |top__GC0           |           1|      6428|
+|1     |simple_memory__GB0 |           1|     19523|
+|2     |simple_memory__GB1 |           1|      3817|
+|3     |simple_memory__GB2 |           1|      4187|
+|4     |simple_memory__GB3 |           1|      4231|
+|5     |simple_memory__GB4 |           1|      6490|
+|6     |simple_memory__GB5 |           1|      4380|
+|7     |top__GC0           |           1|      6192|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:42 ; elapsed = 00:08:15 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 504 ; free virtual = 3058
+Finished Technology Mapping : Time (s): cpu = 00:06:13 ; elapsed = 00:08:07 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 200 ; free virtual = 2335
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|      8934|
-|2     |simple_memory__GB1 |           1|      1888|
-|3     |simple_memory__GB2 |           1|      2389|
-|4     |simple_memory__GB3 |           1|      2706|
-|5     |simple_memory__GB4 |           1|      3261|
-|6     |simple_memory__GB5 |           1|      2129|
-|7     |simple_memory__GB6 |           1|      1977|
-|8     |top__GC0           |           1|      3318|
+|1     |simple_memory__GB0 |           1|     11332|
+|2     |simple_memory__GB1 |           1|      1941|
+|3     |simple_memory__GB2 |           1|      2438|
+|4     |simple_memory__GB3 |           1|      1551|
+|5     |simple_memory__GB4 |           1|      2436|
+|6     |simple_memory__GB5 |           1|      1678|
+|7     |top__GC0           |           1|      3335|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -724,7 +733,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:47 ; elapsed = 00:08:20 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 503 ; free virtual = 3071
+Finished IO Insertion : Time (s): cpu = 00:06:20 ; elapsed = 00:08:14 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 182 ; free virtual = 2335
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -737,7 +746,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:47 ; elapsed = 00:08:20 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 503 ; free virtual = 3071
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:20 ; elapsed = 00:08:14 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 182 ; free virtual = 2335
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -749,25 +758,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:49 ; elapsed = 00:08:22 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 515 ; free virtual = 3082
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:22 ; elapsed = 00:08:16 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 180 ; free virtual = 2333
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:50 ; elapsed = 00:08:23 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 502 ; free virtual = 3069
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:22 ; elapsed = 00:08:16 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 180 ; free virtual = 2333
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:50 ; elapsed = 00:08:24 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 504 ; free virtual = 3071
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:50 ; elapsed = 00:08:24 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 504 ; free virtual = 3071
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -785,19 +794,19 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     2|
 |2     |CARRY4 |    81|
-|3     |LUT1   |     2|
-|4     |LUT2   |   767|
-|5     |LUT3   |   306|
-|6     |LUT4   |  1148|
-|7     |LUT5   |  1918|
-|8     |LUT6   | 12549|
-|9     |MUXF7  |  3009|
-|10    |MUXF8  |  1280|
-|11    |FDCE   |  1160|
-|12    |FDPE   |    64|
-|13    |FDRE   |  4064|
-|14    |LDC    |    33|
-|15    |IBUF   |     5|
+|3     |LUT1   |     4|
+|4     |LUT2   |   686|
+|5     |LUT3   |   276|
+|6     |LUT4   |  1219|
+|7     |LUT5   |  1713|
+|8     |LUT6   | 11695|
+|9     |MUXF7  |  2436|
+|10    |MUXF8  |  1024|
+|11    |FDCE   |  1161|
+|12    |FDPE   |    35|
+|13    |FDRE   |  4434|
+|14    |LDC    |     1|
+|15    |IBUF   |     6|
 |16    |OBUF   |    11|
 +------+-------+------+
 
@@ -805,41 +814,40 @@ Report Instance Areas:
 +------+---------------------+-----------------------+------+
 |      |Instance             |Module                 |Cells |
 +------+---------------------+-----------------------+------+
-|1     |top                  |                       | 26399|
-|2     |  mDisplayDriver     |digital_display_driver |   108|
-|3     |    mClockDivider    |clock_divider          |    86|
-|4     |  mIceRiscRV         |ice_risc_rv            | 12029|
-|5     |    mMainControlUnit |control_rv             | 12029|
-|6     |      mAlu           |alu                    |    87|
-|7     |      mInstrDec      |instr_decode_rv        |    14|
-|8     |      mNextPc        |next_pc_rv             |   103|
-|9     |      mPc            |pc                     |   288|
-|10    |      mRegFile       |regfile_32             |  1824|
+|1     |top                  |                       | 24784|
+|2     |  mDisplayDriver     |digital_display_driver |   109|
+|3     |    mClockDivider    |clock_divider          |    82|
+|4     |  mIceRiscRV         |ice_risc_rv            | 12793|
+|5     |    mMainControlUnit |control_rv             | 12793|
+|6     |      mAlu           |alu                    |   114|
+|7     |      mInstrDec      |instr_decode_rv        |     6|
+|8     |      mNextPc        |next_pc_rv             |     8|
+|9     |      mPc            |pc                     |    33|
+|10    |      mRegFile       |regfile_32             |  1882|
 |11    |  mKeyDebouncer      |key_debouncer          |   169|
-|12    |  mSimMemory         |simple_memory          | 14062|
+|12    |  mSimMemory         |simple_memory          | 11680|
 +------+---------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:50 ; elapsed = 00:08:24 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 504 ; free virtual = 3071
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:37 ; elapsed = 00:08:07 . Memory (MB): peak = 1962.469 ; gain = 346.602 ; free physical = 2589 ; free virtual = 5156
-Synthesis Optimization Complete : Time (s): cpu = 00:06:51 ; elapsed = 00:08:29 . Memory (MB): peak = 1962.469 ; gain = 677.883 ; free physical = 2594 ; free virtual = 5156
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:11 ; elapsed = 00:07:58 . Memory (MB): peak = 1976.223 ; gain = 357.344 ; free physical = 2277 ; free virtual = 4434
+Synthesis Optimization Complete : Time (s): cpu = 00:06:25 ; elapsed = 00:08:20 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 2281 ; free virtual = 4434
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 4408 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3548 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 33 instances were transformed.
-  LDC => LDCE: 33 instances
+  A total of 1 instances were transformed.
+  LDC => LDCE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-191 Infos, 209 Warnings, 0 Critical Warnings and 0 Errors encountered.
+195 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:57 ; elapsed = 00:08:35 . Memory (MB): peak = 1974.555 ; gain = 690.340 ; free physical = 2635 ; free virtual = 5197
+synth_design: Time (s): cpu = 00:06:30 ; elapsed = 00:08:26 . Memory (MB): peak = 1988.309 ; gain = 704.090 ; free physical = 2314 ; free virtual = 4460
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1/top.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1998.566 ; gain = 24.012 ; free physical = 2624 ; free virtual = 5190
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1998.566 ; gain = 0.000 ; free physical = 2624 ; free virtual = 5189
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 20 19:38:29 2018...
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2012.320 ; gain = 0.000 ; free physical = 2324 ; free virtual = 4477
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  9 20:39:06 2018...

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Nov 20 19:41:44 2018
+| Date         : Sun Dec  9 20:42:16 2018
 | Host         : ice-x230 running 64-bit AOSC OS
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -54,79 +54,15 @@ Table of Contents
 --------------------
  There is 1 register/latch pin with no clock driven by root clock pin: iwKey (HIGH)
 
- There are 33 register/latch pins with no clock driven by root clock pin: iwSw[0] (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: iwSw[0] (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: mDisplayDriver/mClockDivider/orNewClk_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[0]/Q (HIGH)
+ There are 5529 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_C/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[10]/Q (HIGH)
+ There are 5529 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_LDC/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[11]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[12]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[13]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[14]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[15]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[16]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[17]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[18]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[19]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[1]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[20]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[21]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[22]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[23]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[24]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[25]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[26]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[27]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[28]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[29]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[2]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[30]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[31]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[3]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[4]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[5]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[6]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[7]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[8]/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: mIceRiscRV/mMainControlUnit/mPc/orPc_reg[9]/Q (HIGH)
-
- There are 5187 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_C/Q (HIGH)
-
- There are 5187 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_LDC/Q (HIGH)
-
- There are 5187 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_P/Q (HIGH)
+ There are 5529 register/latch pins with no clock driven by root clock pin: mKeyDebouncer/orKeyOut_reg_P/Q (HIGH)
 
 
 2. checking constant_clock
@@ -141,7 +77,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 11499 pins that are not constrained for maximum delay. (HIGH)
+ There are 12151 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -200,7 +136,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.331        0.000                      0                   99        0.265        0.000                      0                   99        4.500        0.000                       0                   100  
+      5.583        0.000                      0                   99        0.265        0.000                      0                   99        4.500        0.000                       0                   100  
 
 
 All user specified timing constraints are met.
@@ -223,7 +159,7 @@ clk100M  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100M             5.331        0.000                      0                   99        0.265        0.000                      0                   99        4.500        0.000                       0                   100  
+clk100M             5.583        0.000                      0                   99        0.265        0.000                      0                   99        4.500        0.000                       0                   100  
 
 
 ------------------------------------------------------------------------------------------------
@@ -254,7 +190,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk100M
   To Clock:  clk100M
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.331ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        5.583ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.265ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -262,19 +198,19 @@ PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.331ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+Slack (MET) :             5.583ns  (required time - arrival time)
+  Source:                 mKeyDebouncer/rCountHigh_reg[2]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[6]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/orKeyOut_reg_P/D
+                            (rising edge-triggered cell FDPE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.675ns  (logic 1.269ns (27.146%)  route 3.406ns (72.854%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.782ns = ( 14.782 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
+  Data Path Delay:        4.302ns  (logic 0.952ns (22.127%)  route 3.350ns (77.873%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.847ns = ( 14.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.155ns
     Clock Pessimism Removal (CPR):    0.260ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -290,22 +226,20 @@ Slack (MET) :             5.331ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+                         net (fo=99, routed)          1.634     5.155    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.341     9.629    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X56Y28         LUT2 (Prop_lut2_I1_O)        0.124     9.753 r  mDisplayDriver/mClockDivider/rCounter[6]_i_1/O
-                         net (fo=1, routed)           0.000     9.753    mDisplayDriver/mClockDivider/rCounter_0[6]
-    SLICE_X56Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[6]/D
+    SLICE_X0Y12          FDCE (Prop_fdce_C_Q)         0.456     5.611 r  mKeyDebouncer/rCountHigh_reg[2]/Q
+                         net (fo=2, routed)           0.859     6.471    mKeyDebouncer/rCountHigh_reg[2]
+    SLICE_X1Y12          LUT4 (Prop_lut4_I1_O)        0.124     6.595 f  mKeyDebouncer/i__i_12/O
+                         net (fo=1, routed)           0.403     6.997    mKeyDebouncer/i__i_12_n_0
+    SLICE_X1Y14          LUT5 (Prop_lut5_I4_O)        0.124     7.121 f  mKeyDebouncer/i__i_4/O
+                         net (fo=1, routed)           0.949     8.070    mKeyDebouncer/i__i_4_n_0
+    SLICE_X1Y16          LUT4 (Prop_lut4_I0_O)        0.124     8.194 r  mKeyDebouncer/i__i_1/O
+                         net (fo=1, routed)           0.488     8.682    mKeyDebouncer/i__i_1_n_0
+    SLICE_X5Y19          LUT6 (Prop_lut6_I3_O)        0.124     8.806 r  mKeyDebouncer/orKeyOut_reg/i_/O
+                         net (fo=2, routed)           0.651     9.458    mKeyDebouncer/orKeyOut_reg/i__n_0
+    SLICE_X6Y19          FDPE                                         r  mKeyDebouncer/orKeyOut_reg_P/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)   10.000    10.000 r  
@@ -314,30 +248,30 @@ Slack (MET) :             5.331ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.441    14.782    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X56Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[6]/C
-                         clock pessimism              0.260    15.042    
-                         clock uncertainty           -0.035    15.007    
-    SLICE_X56Y28         FDCE (Setup_fdce_C_D)        0.077    15.084    mDisplayDriver/mClockDivider/rCounter_reg[6]
+                         net (fo=99, routed)          1.506    14.847    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X6Y19          FDPE                                         r  mKeyDebouncer/orKeyOut_reg_P/C
+                         clock pessimism              0.260    15.107    
+                         clock uncertainty           -0.035    15.072    
+    SLICE_X6Y19          FDPE (Setup_fdpe_C_D)       -0.031    15.041    mKeyDebouncer/orKeyOut_reg_P
   -------------------------------------------------------------------
-                         required time                         15.084    
-                         arrival time                          -9.753    
+                         required time                         15.041    
+                         arrival time                          -9.458    
   -------------------------------------------------------------------
-                         slack                                  5.331    
+                         slack                                  5.583    
 
-Slack (MET) :             5.350ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+Slack (MET) :             5.729ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[26]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[7]/D
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[16]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.697ns  (logic 1.291ns (27.487%)  route 3.406ns (72.513%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.782ns = ( 14.782 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
+  Data Path Delay:        4.230ns  (logic 0.828ns (19.572%)  route 3.402ns (80.428%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.778ns = ( 14.778 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
     Clock Pessimism Removal (CPR):    0.260ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -353,22 +287,18 @@ Slack (MET) :             5.350ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[26]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.341     9.629    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X56Y28         LUT2 (Prop_lut2_I1_O)        0.146     9.775 r  mDisplayDriver/mClockDivider/rCounter[7]_i_1/O
-                         net (fo=1, routed)           0.000     9.775    mDisplayDriver/mClockDivider/rCounter_0[7]
-    SLICE_X56Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[7]/D
+    SLICE_X57Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[26]/Q
+                         net (fo=2, routed)           0.856     6.384    mDisplayDriver/mClockDivider/rCounter[26]
+    SLICE_X57Y23         LUT4 (Prop_lut4_I1_O)        0.124     6.508 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
+                         net (fo=1, routed)           0.714     7.222    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.346 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
+                         net (fo=33, routed)          1.832     9.179    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
+    SLICE_X55Y23         LUT5 (Prop_lut5_I0_O)        0.124     9.303 r  mDisplayDriver/mClockDivider/rCounter[16]_i_1/O
+                         net (fo=1, routed)           0.000     9.303    mDisplayDriver/mClockDivider/rCounter_0[16]
+    SLICE_X55Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)   10.000    10.000 r  
@@ -377,31 +307,31 @@ Slack (MET) :             5.350ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.441    14.782    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X56Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[7]/C
-                         clock pessimism              0.260    15.042    
-                         clock uncertainty           -0.035    15.007    
-    SLICE_X56Y28         FDCE (Setup_fdce_C_D)        0.118    15.125    mDisplayDriver/mClockDivider/rCounter_reg[7]
+                         net (fo=99, routed)          1.437    14.778    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[16]/C
+                         clock pessimism              0.260    15.038    
+                         clock uncertainty           -0.035    15.003    
+    SLICE_X55Y23         FDCE (Setup_fdce_C_D)        0.029    15.032    mDisplayDriver/mClockDivider/rCounter_reg[16]
   -------------------------------------------------------------------
-                         required time                         15.125    
-                         arrival time                          -9.775    
+                         required time                         15.032    
+                         arrival time                          -9.303    
   -------------------------------------------------------------------
-                         slack                                  5.350    
+                         slack                                  5.729    
 
-Slack (MET) :             5.471ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+Slack (MET) :             5.732ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[26]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[0]/D
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[20]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.546ns  (logic 1.269ns (27.915%)  route 3.277ns (72.085%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
+  Data Path Delay:        4.229ns  (logic 0.828ns (19.577%)  route 3.401ns (80.423%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.778ns = ( 14.778 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -416,22 +346,77 @@ Slack (MET) :             5.471ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[26]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.213     9.500    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y27         LUT2 (Prop_lut2_I0_O)        0.124     9.624 r  mDisplayDriver/mClockDivider/rCounter[0]_i_1/O
-                         net (fo=1, routed)           0.000     9.624    mDisplayDriver/mClockDivider/rCounter[0]_i_1_n_0
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[0]/D
+    SLICE_X57Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[26]/Q
+                         net (fo=2, routed)           0.856     6.384    mDisplayDriver/mClockDivider/rCounter[26]
+    SLICE_X57Y23         LUT4 (Prop_lut4_I1_O)        0.124     6.508 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
+                         net (fo=1, routed)           0.714     7.222    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.346 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
+                         net (fo=33, routed)          1.831     9.178    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
+    SLICE_X55Y23         LUT5 (Prop_lut5_I0_O)        0.124     9.302 r  mDisplayDriver/mClockDivider/rCounter[20]_i_1/O
+                         net (fo=1, routed)           0.000     9.302    mDisplayDriver/mClockDivider/rCounter_0[20]
+    SLICE_X55Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000    10.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.437    14.778    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[20]/C
+                         clock pessimism              0.260    15.038    
+                         clock uncertainty           -0.035    15.003    
+    SLICE_X55Y23         FDCE (Setup_fdce_C_D)        0.031    15.034    mDisplayDriver/mClockDivider/rCounter_reg[20]
+  -------------------------------------------------------------------
+                         required time                         15.034    
+                         arrival time                          -9.302    
+  -------------------------------------------------------------------
+                         slack                                  5.732    
+
+Slack (MET) :             5.745ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        4.217ns  (logic 0.828ns (19.633%)  route 3.389ns (80.367%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[26]/Q
+                         net (fo=2, routed)           0.856     6.384    mDisplayDriver/mClockDivider/rCounter[26]
+    SLICE_X57Y23         LUT4 (Prop_lut4_I1_O)        0.124     6.508 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
+                         net (fo=1, routed)           0.714     7.222    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.346 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
+                         net (fo=33, routed)          1.819     9.166    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
+    SLICE_X57Y23         LUT5 (Prop_lut5_I0_O)        0.124     9.290 r  mDisplayDriver/mClockDivider/rCounter[18]_i_1/O
+                         net (fo=1, routed)           0.000     9.290    mDisplayDriver/mClockDivider/rCounter_0[18]
+    SLICE_X57Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[18]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)   10.000    10.000 r  
@@ -441,344 +426,29 @@ Slack (MET) :             5.471ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
                          net (fo=99, routed)          1.438    14.779    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[0]/C
-                         clock pessimism              0.274    15.053    
-                         clock uncertainty           -0.035    15.018    
-    SLICE_X54Y27         FDCE (Setup_fdce_C_D)        0.077    15.095    mDisplayDriver/mClockDivider/rCounter_reg[0]
+    SLICE_X57Y23         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[18]/C
+                         clock pessimism              0.260    15.039    
+                         clock uncertainty           -0.035    15.004    
+    SLICE_X57Y23         FDCE (Setup_fdce_C_D)        0.031    15.035    mDisplayDriver/mClockDivider/rCounter_reg[18]
   -------------------------------------------------------------------
-                         required time                         15.095    
-                         arrival time                          -9.624    
+                         required time                         15.035    
+                         arrival time                          -9.290    
   -------------------------------------------------------------------
-                         slack                                  5.471    
+                         slack                                  5.745    
 
-Slack (MET) :             5.485ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[2]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.536ns  (logic 1.269ns (27.977%)  route 3.267ns (72.023%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.203     9.490    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y27         LUT2 (Prop_lut2_I1_O)        0.124     9.614 r  mDisplayDriver/mClockDivider/rCounter[2]_i_1/O
-                         net (fo=1, routed)           0.000     9.614    mDisplayDriver/mClockDivider/rCounter_0[2]
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)   10.000    10.000 r  
-    W5                                                0.000    10.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000    10.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.438    14.779    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[2]/C
-                         clock pessimism              0.274    15.053    
-                         clock uncertainty           -0.035    15.018    
-    SLICE_X54Y27         FDCE (Setup_fdce_C_D)        0.081    15.099    mDisplayDriver/mClockDivider/rCounter_reg[2]
-  -------------------------------------------------------------------
-                         required time                         15.099    
-                         arrival time                          -9.614    
-  -------------------------------------------------------------------
-                         slack                                  5.485    
-
-Slack (MET) :             5.486ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[4]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.572ns  (logic 1.295ns (28.325%)  route 3.277ns (71.675%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.213     9.500    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y27         LUT2 (Prop_lut2_I1_O)        0.150     9.650 r  mDisplayDriver/mClockDivider/rCounter[4]_i_1/O
-                         net (fo=1, routed)           0.000     9.650    mDisplayDriver/mClockDivider/rCounter_0[4]
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)   10.000    10.000 r  
-    W5                                                0.000    10.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000    10.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.438    14.779    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[4]/C
-                         clock pessimism              0.274    15.053    
-                         clock uncertainty           -0.035    15.018    
-    SLICE_X54Y27         FDCE (Setup_fdce_C_D)        0.118    15.136    mDisplayDriver/mClockDivider/rCounter_reg[4]
-  -------------------------------------------------------------------
-                         required time                         15.136    
-                         arrival time                          -9.650    
-  -------------------------------------------------------------------
-                         slack                                  5.486    
-
-Slack (MET) :             5.494ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[3]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.564ns  (logic 1.297ns (28.419%)  route 3.267ns (71.581%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.203     9.490    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y27         LUT2 (Prop_lut2_I1_O)        0.152     9.642 r  mDisplayDriver/mClockDivider/rCounter[3]_i_1/O
-                         net (fo=1, routed)           0.000     9.642    mDisplayDriver/mClockDivider/rCounter_0[3]
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)   10.000    10.000 r  
-    W5                                                0.000    10.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000    10.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.438    14.779    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y27         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[3]/C
-                         clock pessimism              0.274    15.053    
-                         clock uncertainty           -0.035    15.018    
-    SLICE_X54Y27         FDCE (Setup_fdce_C_D)        0.118    15.136    mDisplayDriver/mClockDivider/rCounter_reg[3]
-  -------------------------------------------------------------------
-                         required time                         15.136    
-                         arrival time                          -9.642    
-  -------------------------------------------------------------------
-                         slack                                  5.494    
-
-Slack (MET) :             5.564ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[10]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.458ns  (logic 1.269ns (28.463%)  route 3.189ns (71.537%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.785ns = ( 14.785 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.125     9.413    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y32         LUT2 (Prop_lut2_I1_O)        0.124     9.537 r  mDisplayDriver/mClockDivider/rCounter[10]_i_1/O
-                         net (fo=1, routed)           0.000     9.537    mDisplayDriver/mClockDivider/rCounter_0[10]
-    SLICE_X54Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[10]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)   10.000    10.000 r  
-    W5                                                0.000    10.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000    10.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.444    14.785    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[10]/C
-                         clock pessimism              0.274    15.059    
-                         clock uncertainty           -0.035    15.024    
-    SLICE_X54Y32         FDCE (Setup_fdce_C_D)        0.077    15.101    mDisplayDriver/mClockDivider/rCounter_reg[10]
-  -------------------------------------------------------------------
-                         required time                         15.101    
-                         arrival time                          -9.537    
-  -------------------------------------------------------------------
-                         slack                                  5.564    
-
-Slack (MET) :             5.579ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[24]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.484ns  (logic 1.295ns (28.877%)  route 3.189ns (71.123%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.785ns = ( 14.785 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.125     9.413    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X54Y32         LUT2 (Prop_lut2_I1_O)        0.150     9.563 r  mDisplayDriver/mClockDivider/rCounter[24]_i_1/O
-                         net (fo=1, routed)           0.000     9.563    mDisplayDriver/mClockDivider/rCounter_0[24]
-    SLICE_X54Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[24]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)   10.000    10.000 r  
-    W5                                                0.000    10.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000    10.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.444    14.785    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[24]/C
-                         clock pessimism              0.274    15.059    
-                         clock uncertainty           -0.035    15.024    
-    SLICE_X54Y32         FDCE (Setup_fdce_C_D)        0.118    15.142    mDisplayDriver/mClockDivider/rCounter_reg[24]
-  -------------------------------------------------------------------
-                         required time                         15.142    
-                         arrival time                          -9.563    
-  -------------------------------------------------------------------
-                         slack                                  5.579    
-
-Slack (MET) :             5.631ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+Slack (MET) :             5.751ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[26]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            mDisplayDriver/mClockDivider/rCounter_reg[21]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.379ns  (logic 1.269ns (28.980%)  route 3.110ns (71.020%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.032ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.786ns = ( 14.786 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
+  Data Path Delay:        4.206ns  (logic 0.828ns (19.684%)  route 3.378ns (80.316%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
     Clock Pessimism Removal (CPR):    0.260ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -794,22 +464,18 @@ Slack (MET) :             5.631ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[26]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.046     9.333    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X56Y32         LUT2 (Prop_lut2_I1_O)        0.124     9.457 r  mDisplayDriver/mClockDivider/rCounter[21]_i_1/O
-                         net (fo=1, routed)           0.000     9.457    mDisplayDriver/mClockDivider/rCounter_0[21]
-    SLICE_X56Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[21]/D
+    SLICE_X57Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[26]/Q
+                         net (fo=2, routed)           0.856     6.384    mDisplayDriver/mClockDivider/rCounter[26]
+    SLICE_X57Y23         LUT4 (Prop_lut4_I1_O)        0.124     6.508 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
+                         net (fo=1, routed)           0.714     7.222    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.346 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
+                         net (fo=33, routed)          1.808     9.155    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
+    SLICE_X55Y24         LUT5 (Prop_lut5_I0_O)        0.124     9.279 r  mDisplayDriver/mClockDivider/rCounter[21]_i_1/O
+                         net (fo=1, routed)           0.000     9.279    mDisplayDriver/mClockDivider/rCounter_0[21]
+    SLICE_X55Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[21]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)   10.000    10.000 r  
@@ -818,30 +484,30 @@ Slack (MET) :             5.631ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.445    14.786    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X56Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[21]/C
-                         clock pessimism              0.260    15.046    
-                         clock uncertainty           -0.035    15.011    
-    SLICE_X56Y32         FDCE (Setup_fdce_C_D)        0.077    15.088    mDisplayDriver/mClockDivider/rCounter_reg[21]
+                         net (fo=99, routed)          1.435    14.776    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[21]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X55Y24         FDCE (Setup_fdce_C_D)        0.029    15.030    mDisplayDriver/mClockDivider/rCounter_reg[21]
   -------------------------------------------------------------------
-                         required time                         15.088    
-                         arrival time                          -9.457    
+                         required time                         15.030    
+                         arrival time                          -9.279    
   -------------------------------------------------------------------
-                         slack                                  5.631    
+                         slack                                  5.751    
 
-Slack (MET) :             5.648ns  (required time - arrival time)
-  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+Slack (MET) :             5.835ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[31]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[23]/D
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[29]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        4.403ns  (logic 1.293ns (29.367%)  route 3.110ns (70.633%))
-  Logic Levels:           5  (LUT2=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.032ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.786ns = ( 14.786 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.078ns
+  Data Path Delay:        4.125ns  (logic 0.828ns (20.071%)  route 3.297ns (79.929%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
     Clock Pessimism Removal (CPR):    0.260ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -857,22 +523,18 @@ Slack (MET) :             5.648ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.557     5.078    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X54Y28         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[5]/C
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[31]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y28         FDCE (Prop_fdce_C_Q)         0.478     5.556 r  mDisplayDriver/mClockDivider/rCounter_reg[5]/Q
-                         net (fo=2, routed)           0.818     6.375    mDisplayDriver/mClockDivider/rCounter[5]
-    SLICE_X56Y28         LUT4 (Prop_lut4_I3_O)        0.295     6.670 r  mDisplayDriver/mClockDivider/orNewClk_i_7/O
-                         net (fo=2, routed)           0.488     7.158    mDisplayDriver/mClockDivider/orNewClk_i_7_n_0
-    SLICE_X54Y28         LUT5 (Prop_lut5_I0_O)        0.124     7.282 r  mDisplayDriver/mClockDivider/rCounter[31]_i_6/O
-                         net (fo=1, routed)           0.303     7.585    mDisplayDriver/mClockDivider/rCounter[31]_i_6_n_0
-    SLICE_X54Y29         LUT6 (Prop_lut6_I5_O)        0.124     7.709 r  mDisplayDriver/mClockDivider/rCounter[31]_i_5/O
-                         net (fo=1, routed)           0.455     8.164    mDisplayDriver/mClockDivider/rCounter[31]_i_5_n_0
-    SLICE_X54Y31         LUT6 (Prop_lut6_I5_O)        0.124     8.288 r  mDisplayDriver/mClockDivider/rCounter[31]_i_2/O
-                         net (fo=32, routed)          1.046     9.333    mDisplayDriver/mClockDivider/rCounter[31]_i_2_n_0
-    SLICE_X56Y32         LUT2 (Prop_lut2_I1_O)        0.148     9.481 r  mDisplayDriver/mClockDivider/rCounter[23]_i_1/O
-                         net (fo=1, routed)           0.000     9.481    mDisplayDriver/mClockDivider/rCounter_0[23]
-    SLICE_X56Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[23]/D
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[31]/Q
+                         net (fo=2, routed)           1.182     6.710    mDisplayDriver/mClockDivider/rCounter[31]
+    SLICE_X57Y21         LUT4 (Prop_lut4_I0_O)        0.124     6.834 r  mDisplayDriver/mClockDivider/rCounter[31]_i_7/O
+                         net (fo=1, routed)           0.263     7.097    mDisplayDriver/mClockDivider/rCounter[31]_i_7_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.221 f  mDisplayDriver/mClockDivider/rCounter[31]_i_3/O
+                         net (fo=33, routed)          1.853     9.074    mDisplayDriver/mClockDivider/rCounter[31]_i_3_n_0
+    SLICE_X57Y25         LUT5 (Prop_lut5_I1_O)        0.124     9.198 r  mDisplayDriver/mClockDivider/rCounter[29]_i_1/O
+                         net (fo=1, routed)           0.000     9.198    mDisplayDriver/mClockDivider/rCounter_0[29]
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[29]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)   10.000    10.000 r  
@@ -881,16 +543,252 @@ Slack (MET) :             5.648ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          1.445    14.786    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
-    SLICE_X56Y32         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[23]/C
-                         clock pessimism              0.260    15.046    
-                         clock uncertainty           -0.035    15.011    
-    SLICE_X56Y32         FDCE (Setup_fdce_C_D)        0.118    15.129    mDisplayDriver/mClockDivider/rCounter_reg[23]
+                         net (fo=99, routed)          1.436    14.777    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[29]/C
+                         clock pessimism              0.260    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X57Y25         FDCE (Setup_fdce_C_D)        0.031    15.033    mDisplayDriver/mClockDivider/rCounter_reg[29]
   -------------------------------------------------------------------
-                         required time                         15.129    
-                         arrival time                          -9.481    
+                         required time                         15.033    
+                         arrival time                          -9.198    
   -------------------------------------------------------------------
-                         slack                                  5.648    
+                         slack                                  5.835    
+
+Slack (MET) :             5.875ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[30]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        4.086ns  (logic 0.828ns (20.263%)  route 3.258ns (79.737%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[31]/Q
+                         net (fo=2, routed)           1.182     6.710    mDisplayDriver/mClockDivider/rCounter[31]
+    SLICE_X57Y21         LUT4 (Prop_lut4_I0_O)        0.124     6.834 r  mDisplayDriver/mClockDivider/rCounter[31]_i_7/O
+                         net (fo=1, routed)           0.263     7.097    mDisplayDriver/mClockDivider/rCounter[31]_i_7_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.221 f  mDisplayDriver/mClockDivider/rCounter[31]_i_3/O
+                         net (fo=33, routed)          1.813     9.034    mDisplayDriver/mClockDivider/rCounter[31]_i_3_n_0
+    SLICE_X57Y25         LUT5 (Prop_lut5_I1_O)        0.124     9.158 r  mDisplayDriver/mClockDivider/rCounter[30]_i_1/O
+                         net (fo=1, routed)           0.000     9.158    mDisplayDriver/mClockDivider/rCounter_0[30]
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000    10.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.436    14.777    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[30]/C
+                         clock pessimism              0.260    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X57Y25         FDCE (Setup_fdce_C_D)        0.032    15.034    mDisplayDriver/mClockDivider/rCounter_reg[30]
+  -------------------------------------------------------------------
+                         required time                         15.034    
+                         arrival time                          -9.158    
+  -------------------------------------------------------------------
+                         slack                                  5.875    
+
+Slack (MET) :             5.943ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        4.018ns  (logic 0.828ns (20.609%)  route 3.190ns (79.391%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[31]/Q
+                         net (fo=2, routed)           1.182     6.710    mDisplayDriver/mClockDivider/rCounter[31]
+    SLICE_X57Y21         LUT4 (Prop_lut4_I0_O)        0.124     6.834 r  mDisplayDriver/mClockDivider/rCounter[31]_i_7/O
+                         net (fo=1, routed)           0.263     7.097    mDisplayDriver/mClockDivider/rCounter[31]_i_7_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.221 f  mDisplayDriver/mClockDivider/rCounter[31]_i_3/O
+                         net (fo=33, routed)          1.745     8.966    mDisplayDriver/mClockDivider/rCounter[31]_i_3_n_0
+    SLICE_X57Y24         LUT5 (Prop_lut5_I1_O)        0.124     9.090 r  mDisplayDriver/mClockDivider/rCounter[24]_i_1/O
+                         net (fo=1, routed)           0.000     9.090    mDisplayDriver/mClockDivider/rCounter_0[24]
+    SLICE_X57Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000    10.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.436    14.777    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[24]/C
+                         clock pessimism              0.260    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X57Y24         FDCE (Setup_fdce_C_D)        0.031    15.033    mDisplayDriver/mClockDivider/rCounter_reg[24]
+  -------------------------------------------------------------------
+                         required time                         15.033    
+                         arrival time                          -9.090    
+  -------------------------------------------------------------------
+                         slack                                  5.943    
+
+Slack (MET) :             5.949ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[27]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        4.013ns  (logic 0.828ns (20.634%)  route 3.185ns (79.366%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[31]/Q
+                         net (fo=2, routed)           1.182     6.710    mDisplayDriver/mClockDivider/rCounter[31]
+    SLICE_X57Y21         LUT4 (Prop_lut4_I0_O)        0.124     6.834 r  mDisplayDriver/mClockDivider/rCounter[31]_i_7/O
+                         net (fo=1, routed)           0.263     7.097    mDisplayDriver/mClockDivider/rCounter[31]_i_7_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.221 f  mDisplayDriver/mClockDivider/rCounter[31]_i_3/O
+                         net (fo=33, routed)          1.740     8.961    mDisplayDriver/mClockDivider/rCounter[31]_i_3_n_0
+    SLICE_X57Y24         LUT5 (Prop_lut5_I1_O)        0.124     9.085 r  mDisplayDriver/mClockDivider/rCounter[27]_i_1/O
+                         net (fo=1, routed)           0.000     9.085    mDisplayDriver/mClockDivider/rCounter_0[27]
+    SLICE_X57Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000    10.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.436    14.777    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y24         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[27]/C
+                         clock pessimism              0.260    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X57Y24         FDCE (Setup_fdce_C_D)        0.032    15.034    mDisplayDriver/mClockDivider/rCounter_reg[27]
+  -------------------------------------------------------------------
+                         required time                         15.034    
+                         arrival time                          -9.085    
+  -------------------------------------------------------------------
+                         slack                                  5.949    
+
+Slack (MET) :             5.950ns  (required time - arrival time)
+  Source:                 mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mDisplayDriver/mClockDivider/rCounter_reg[28]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100M rise@10.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        4.011ns  (logic 0.828ns (20.643%)  route 3.183ns (79.357%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.072ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.551     5.072    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.456     5.528 r  mDisplayDriver/mClockDivider/rCounter_reg[31]/Q
+                         net (fo=2, routed)           1.182     6.710    mDisplayDriver/mClockDivider/rCounter[31]
+    SLICE_X57Y21         LUT4 (Prop_lut4_I0_O)        0.124     6.834 r  mDisplayDriver/mClockDivider/rCounter[31]_i_7/O
+                         net (fo=1, routed)           0.263     7.097    mDisplayDriver/mClockDivider/rCounter[31]_i_7_n_0
+    SLICE_X57Y21         LUT5 (Prop_lut5_I4_O)        0.124     7.221 f  mDisplayDriver/mClockDivider/rCounter[31]_i_3/O
+                         net (fo=33, routed)          1.738     8.959    mDisplayDriver/mClockDivider/rCounter[31]_i_3_n_0
+    SLICE_X57Y25         LUT5 (Prop_lut5_I1_O)        0.124     9.083 r  mDisplayDriver/mClockDivider/rCounter[28]_i_1/O
+                         net (fo=1, routed)           0.000     9.083    mDisplayDriver/mClockDivider/rCounter_0[28]
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)   10.000    10.000 r  
+    W5                                                0.000    10.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000    10.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          1.436    14.777    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X57Y25         FDCE                                         r  mDisplayDriver/mClockDivider/rCounter_reg[28]/C
+                         clock pessimism              0.260    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X57Y25         FDCE (Setup_fdce_C_D)        0.031    15.033    mDisplayDriver/mClockDivider/rCounter_reg[28]
+  -------------------------------------------------------------------
+                         required time                         15.033    
+                         arrival time                          -9.083    
+  -------------------------------------------------------------------
+                         slack                                  5.950    
 
 
 
@@ -899,19 +797,19 @@ Slack (MET) :             5.648ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.265ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/orKeyOut_reg_C/C
+  Source:                 mDisplayDriver/mClockDivider/orNewClk_reg/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/orKeyOut_reg_C/D
+  Destination:            mDisplayDriver/mClockDivider/orNewClk_reg/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.356ns  (logic 0.186ns (52.300%)  route 0.170ns (47.700%))
+  Data Path Delay:        0.356ns  (logic 0.186ns (52.178%)  route 0.170ns (47.822%))
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.983ns
-    Source Clock Delay      (SCD):    1.470ns
-    Clock Pessimism Removal (CPR):    0.513ns
+    Destination Clock Delay (DCD):    1.948ns
+    Source Clock Delay      (SCD):    1.436ns
+    Clock Pessimism Removal (CPR):    0.512ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -921,14 +819,14 @@ Slack (MET) :             0.265ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.587     1.470    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X3Y19          FDCE                                         r  mKeyDebouncer/orKeyOut_reg_C/C
+                         net (fo=99, routed)          0.553     1.436    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/orNewClk_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y19          FDCE (Prop_fdce_C_Q)         0.141     1.611 r  mKeyDebouncer/orKeyOut_reg_C/Q
-                         net (fo=2, routed)           0.170     1.781    mKeyDebouncer/orKeyOut_reg_C_n_0
-    SLICE_X3Y19          LUT6 (Prop_lut6_I2_O)        0.045     1.826 r  mKeyDebouncer/orKeyOut_reg/i_/O
-                         net (fo=2, routed)           0.000     1.826    mKeyDebouncer/orKeyOut_reg/i__n_0
-    SLICE_X3Y19          FDCE                                         r  mKeyDebouncer/orKeyOut_reg_C/D
+    SLICE_X55Y25         FDCE (Prop_fdce_C_Q)         0.141     1.577 r  mDisplayDriver/mClockDivider/orNewClk_reg/Q
+                         net (fo=3, routed)           0.170     1.748    mDisplayDriver/mClockDivider/CLK
+    SLICE_X55Y25         LUT6 (Prop_lut6_I5_O)        0.045     1.793 r  mDisplayDriver/mClockDivider/orNewClk_i_1/O
+                         net (fo=1, routed)           0.000     1.793    mDisplayDriver/mClockDivider/orNewClk_i_1_n_0
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/orNewClk_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)    0.000     0.000 r  
@@ -937,233 +835,25 @@ Slack (MET) :             0.265ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.856     1.983    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X3Y19          FDCE                                         r  mKeyDebouncer/orKeyOut_reg_C/C
-                         clock pessimism             -0.513     1.470    
-    SLICE_X3Y19          FDCE (Hold_fdce_C_D)         0.091     1.561    mKeyDebouncer/orKeyOut_reg_C
+                         net (fo=99, routed)          0.821     1.948    mDisplayDriver/mClockDivider/iwClk100M_IBUF_BUFG
+    SLICE_X55Y25         FDCE                                         r  mDisplayDriver/mClockDivider/orNewClk_reg/C
+                         clock pessimism             -0.512     1.436    
+    SLICE_X55Y25         FDCE (Hold_fdce_C_D)         0.091     1.527    mDisplayDriver/mClockDivider/orNewClk_reg
   -------------------------------------------------------------------
-                         required time                         -1.561    
-                         arrival time                           1.826    
+                         required time                         -1.527    
+                         arrival time                           1.793    
   -------------------------------------------------------------------
                          slack                                  0.265    
 
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[7]/C
+Slack (MET) :             0.316ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountHigh_reg[23]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[7]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.989ns
-    Source Clock Delay      (SCD):    1.475ns
-    Clock Pessimism Removal (CPR):    0.514ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.592     1.475    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y12          FDCE                                         r  mKeyDebouncer/rCountLow_reg[7]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y12          FDCE (Prop_fdce_C_Q)         0.164     1.639 r  mKeyDebouncer/rCountLow_reg[7]/Q
-                         net (fo=2, routed)           0.148     1.787    mKeyDebouncer/rCountLow_reg[7]
-    SLICE_X2Y12          LUT2 (Prop_lut2_I0_O)        0.045     1.832 r  mKeyDebouncer/rCountLow[4]_i_2/O
-                         net (fo=1, routed)           0.000     1.832    mKeyDebouncer/rCountLow[4]_i_2_n_0
-    SLICE_X2Y12          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.896 r  mKeyDebouncer/rCountLow_reg[4]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.896    mKeyDebouncer/rCountLow_reg[4]_i_1_n_4
-    SLICE_X2Y12          FDCE                                         r  mKeyDebouncer/rCountLow_reg[7]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.862     1.989    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y12          FDCE                                         r  mKeyDebouncer/rCountLow_reg[7]/C
-                         clock pessimism             -0.514     1.475    
-    SLICE_X2Y12          FDCE (Hold_fdce_C_D)         0.134     1.609    mKeyDebouncer/rCountLow_reg[7]
-  -------------------------------------------------------------------
-                         required time                         -1.609    
-                         arrival time                           1.896    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[11]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[11]/D
+  Destination:            mKeyDebouncer/rCountHigh_reg[23]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.988ns
-    Source Clock Delay      (SCD):    1.474ns
-    Clock Pessimism Removal (CPR):    0.514ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.591     1.474    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y13          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y13          FDCE (Prop_fdce_C_Q)         0.164     1.638 r  mKeyDebouncer/rCountLow_reg[11]/Q
-                         net (fo=2, routed)           0.148     1.786    mKeyDebouncer/rCountLow_reg[11]
-    SLICE_X2Y13          LUT2 (Prop_lut2_I0_O)        0.045     1.831 r  mKeyDebouncer/rCountLow[8]_i_2/O
-                         net (fo=1, routed)           0.000     1.831    mKeyDebouncer/rCountLow[8]_i_2_n_0
-    SLICE_X2Y13          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.895 r  mKeyDebouncer/rCountLow_reg[8]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.895    mKeyDebouncer/rCountLow_reg[8]_i_1_n_4
-    SLICE_X2Y13          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.861     1.988    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y13          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/C
-                         clock pessimism             -0.514     1.474    
-    SLICE_X2Y13          FDCE (Hold_fdce_C_D)         0.134     1.608    mKeyDebouncer/rCountLow_reg[11]
-  -------------------------------------------------------------------
-                         required time                         -1.608    
-                         arrival time                           1.895    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[15]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[15]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.988ns
-    Source Clock Delay      (SCD):    1.474ns
-    Clock Pessimism Removal (CPR):    0.514ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.591     1.474    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y14          FDCE (Prop_fdce_C_Q)         0.164     1.638 r  mKeyDebouncer/rCountLow_reg[15]/Q
-                         net (fo=2, routed)           0.148     1.786    mKeyDebouncer/rCountLow_reg[15]
-    SLICE_X2Y14          LUT2 (Prop_lut2_I0_O)        0.045     1.831 r  mKeyDebouncer/rCountLow[12]_i_2/O
-                         net (fo=1, routed)           0.000     1.831    mKeyDebouncer/rCountLow[12]_i_2_n_0
-    SLICE_X2Y14          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.895 r  mKeyDebouncer/rCountLow_reg[12]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.895    mKeyDebouncer/rCountLow_reg[12]_i_1_n_4
-    SLICE_X2Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.861     1.988    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/C
-                         clock pessimism             -0.514     1.474    
-    SLICE_X2Y14          FDCE (Hold_fdce_C_D)         0.134     1.608    mKeyDebouncer/rCountLow_reg[15]
-  -------------------------------------------------------------------
-                         required time                         -1.608    
-                         arrival time                           1.895    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[23]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[23]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.986ns
-    Source Clock Delay      (SCD):    1.473ns
-    Clock Pessimism Removal (CPR):    0.513ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.590     1.473    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y16          FDCE (Prop_fdce_C_Q)         0.164     1.637 r  mKeyDebouncer/rCountLow_reg[23]/Q
-                         net (fo=2, routed)           0.148     1.785    mKeyDebouncer/rCountLow_reg[23]
-    SLICE_X2Y16          LUT2 (Prop_lut2_I0_O)        0.045     1.830 r  mKeyDebouncer/rCountLow[20]_i_2/O
-                         net (fo=1, routed)           0.000     1.830    mKeyDebouncer/rCountLow[20]_i_2_n_0
-    SLICE_X2Y16          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.894 r  mKeyDebouncer/rCountLow_reg[20]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.894    mKeyDebouncer/rCountLow_reg[20]_i_1_n_4
-    SLICE_X2Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.859     1.986    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/C
-                         clock pessimism             -0.513     1.473    
-    SLICE_X2Y16          FDCE (Hold_fdce_C_D)         0.134     1.607    mKeyDebouncer/rCountLow_reg[23]
-  -------------------------------------------------------------------
-                         required time                         -1.607    
-                         arrival time                           1.894    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[27]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[27]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
+  Data Path Delay:        0.421ns  (logic 0.249ns (59.169%)  route 0.172ns (40.831%))
   Logic Levels:           2  (CARRY4=1 LUT2=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.985ns
@@ -1179,16 +869,16 @@ Slack (MET) :             0.287ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
                          net (fo=99, routed)          0.589     1.472    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[27]/C
+    SLICE_X0Y17          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[23]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y17          FDCE (Prop_fdce_C_Q)         0.164     1.636 r  mKeyDebouncer/rCountLow_reg[27]/Q
-                         net (fo=2, routed)           0.148     1.784    mKeyDebouncer/rCountLow_reg[27]
-    SLICE_X2Y17          LUT2 (Prop_lut2_I0_O)        0.045     1.829 r  mKeyDebouncer/rCountLow[24]_i_2/O
-                         net (fo=1, routed)           0.000     1.829    mKeyDebouncer/rCountLow[24]_i_2_n_0
-    SLICE_X2Y17          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.893 r  mKeyDebouncer/rCountLow_reg[24]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.893    mKeyDebouncer/rCountLow_reg[24]_i_1_n_4
-    SLICE_X2Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[27]/D
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.141     1.613 r  mKeyDebouncer/rCountHigh_reg[23]/Q
+                         net (fo=2, routed)           0.172     1.785    mKeyDebouncer/rCountHigh_reg[23]
+    SLICE_X0Y17          LUT2 (Prop_lut2_I1_O)        0.045     1.830 r  mKeyDebouncer/rCountHigh[20]_i_2/O
+                         net (fo=1, routed)           0.000     1.830    mKeyDebouncer/rCountHigh[20]_i_2_n_0
+    SLICE_X0Y17          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.893 r  mKeyDebouncer/rCountHigh_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.893    mKeyDebouncer/rCountHigh_reg[20]_i_1_n_4
+    SLICE_X0Y17          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[23]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)    0.000     0.000 r  
@@ -1198,175 +888,19 @@ Slack (MET) :             0.287ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
                          net (fo=99, routed)          0.858     1.985    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[27]/C
+    SLICE_X0Y17          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[23]/C
                          clock pessimism             -0.513     1.472    
-    SLICE_X2Y17          FDCE (Hold_fdce_C_D)         0.134     1.606    mKeyDebouncer/rCountLow_reg[27]
+    SLICE_X0Y17          FDCE (Hold_fdce_C_D)         0.105     1.577    mKeyDebouncer/rCountHigh_reg[23]
   -------------------------------------------------------------------
-                         required time                         -1.606    
+                         required time                         -1.577    
                          arrival time                           1.893    
   -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[31]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[31]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.984ns
-    Source Clock Delay      (SCD):    1.471ns
-    Clock Pessimism Removal (CPR):    0.513ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.588     1.471    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y18          FDCE                                         r  mKeyDebouncer/rCountLow_reg[31]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y18          FDCE (Prop_fdce_C_Q)         0.164     1.635 r  mKeyDebouncer/rCountLow_reg[31]/Q
-                         net (fo=2, routed)           0.148     1.783    mKeyDebouncer/rCountLow_reg[31]
-    SLICE_X2Y18          LUT2 (Prop_lut2_I0_O)        0.045     1.828 r  mKeyDebouncer/rCountLow[28]_i_2/O
-                         net (fo=1, routed)           0.000     1.828    mKeyDebouncer/rCountLow[28]_i_2_n_0
-    SLICE_X2Y18          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.892 r  mKeyDebouncer/rCountLow_reg[28]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.892    mKeyDebouncer/rCountLow_reg[28]_i_1_n_4
-    SLICE_X2Y18          FDCE                                         r  mKeyDebouncer/rCountLow_reg[31]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.857     1.984    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y18          FDCE                                         r  mKeyDebouncer/rCountLow_reg[31]/C
-                         clock pessimism             -0.513     1.471    
-    SLICE_X2Y18          FDCE (Hold_fdce_C_D)         0.134     1.605    mKeyDebouncer/rCountLow_reg[31]
-  -------------------------------------------------------------------
-                         required time                         -1.605    
-                         arrival time                           1.892    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[3]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[3]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.991ns
-    Source Clock Delay      (SCD):    1.476ns
-    Clock Pessimism Removal (CPR):    0.515ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.593     1.476    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y11          FDCE                                         r  mKeyDebouncer/rCountLow_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y11          FDCE (Prop_fdce_C_Q)         0.164     1.640 r  mKeyDebouncer/rCountLow_reg[3]/Q
-                         net (fo=2, routed)           0.148     1.788    mKeyDebouncer/rCountLow_reg[3]
-    SLICE_X2Y11          LUT2 (Prop_lut2_I0_O)        0.045     1.833 r  mKeyDebouncer/rCountLow[0]_i_3/O
-                         net (fo=1, routed)           0.000     1.833    mKeyDebouncer/rCountLow[0]_i_3_n_0
-    SLICE_X2Y11          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.897 r  mKeyDebouncer/rCountLow_reg[0]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.897    mKeyDebouncer/rCountLow_reg[0]_i_1_n_4
-    SLICE_X2Y11          FDCE                                         r  mKeyDebouncer/rCountLow_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.864     1.991    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y11          FDCE                                         r  mKeyDebouncer/rCountLow_reg[3]/C
-                         clock pessimism             -0.515     1.476    
-    SLICE_X2Y11          FDCE (Hold_fdce_C_D)         0.134     1.610    mKeyDebouncer/rCountLow_reg[3]
-  -------------------------------------------------------------------
-                         required time                         -1.610    
-                         arrival time                           1.897    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
-
-Slack (MET) :             0.287ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountLow_reg[19]/C
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountLow_reg[19]/D
-                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100M
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
-  Data Path Delay:        0.421ns  (logic 0.273ns (64.814%)  route 0.148ns (35.186%))
-  Logic Levels:           2  (CARRY4=1 LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.987ns
-    Source Clock Delay      (SCD):    1.474ns
-    Clock Pessimism Removal (CPR):    0.513ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.591     1.474    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y15          FDCE (Prop_fdce_C_Q)         0.164     1.638 r  mKeyDebouncer/rCountLow_reg[19]/Q
-                         net (fo=2, routed)           0.148     1.786    mKeyDebouncer/rCountLow_reg[19]
-    SLICE_X2Y15          LUT2 (Prop_lut2_I0_O)        0.045     1.831 r  mKeyDebouncer/rCountLow[16]_i_2/O
-                         net (fo=1, routed)           0.000     1.831    mKeyDebouncer/rCountLow[16]_i_2_n_0
-    SLICE_X2Y15          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.895 r  mKeyDebouncer/rCountLow_reg[16]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.895    mKeyDebouncer/rCountLow_reg[16]_i_1_n_4
-    SLICE_X2Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100M rise edge)    0.000     0.000 r  
-    W5                                                0.000     0.000 r  iwClk100M (IN)
-                         net (fo=0)                   0.000     0.000    iwClk100M
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
-                         net (fo=99, routed)          0.860     1.987    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X2Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/C
-                         clock pessimism             -0.513     1.474    
-    SLICE_X2Y15          FDCE (Hold_fdce_C_D)         0.134     1.608    mKeyDebouncer/rCountLow_reg[19]
-  -------------------------------------------------------------------
-                         required time                         -1.608    
-                         arrival time                           1.895    
-  -------------------------------------------------------------------
-                         slack                                  0.287    
+                         slack                                  0.316    
 
 Slack (MET) :             0.316ns  (arrival time - required time)
-  Source:                 mKeyDebouncer/rCountHigh_reg[11]/C
+  Source:                 mKeyDebouncer/rCountHigh_reg[3]/C
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mKeyDebouncer/rCountHigh_reg[11]/D
+  Destination:            mKeyDebouncer/rCountHigh_reg[3]/D
                             (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100M
   Path Type:              Hold (Min at Fast Process Corner)
@@ -1387,16 +921,16 @@ Slack (MET) :             0.316ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
                          net (fo=99, routed)          0.592     1.475    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[11]/C
+    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y12          FDCE (Prop_fdce_C_Q)         0.141     1.616 r  mKeyDebouncer/rCountHigh_reg[11]/Q
-                         net (fo=2, routed)           0.172     1.788    mKeyDebouncer/rCountHigh_reg[11]
-    SLICE_X0Y12          LUT2 (Prop_lut2_I1_O)        0.045     1.833 r  mKeyDebouncer/rCountHigh[8]_i_2/O
-                         net (fo=1, routed)           0.000     1.833    mKeyDebouncer/rCountHigh[8]_i_2_n_0
+    SLICE_X0Y12          FDCE (Prop_fdce_C_Q)         0.141     1.616 r  mKeyDebouncer/rCountHigh_reg[3]/Q
+                         net (fo=2, routed)           0.172     1.788    mKeyDebouncer/rCountHigh_reg[3]
+    SLICE_X0Y12          LUT2 (Prop_lut2_I1_O)        0.045     1.833 r  mKeyDebouncer/rCountHigh[0]_i_2/O
+                         net (fo=1, routed)           0.000     1.833    mKeyDebouncer/rCountHigh[0]_i_2_n_0
     SLICE_X0Y12          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.063     1.896 r  mKeyDebouncer/rCountHigh_reg[8]_i_1/O[3]
-                         net (fo=1, routed)           0.000     1.896    mKeyDebouncer/rCountHigh_reg[8]_i_1_n_4
-    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[11]/D
+                                                      0.063     1.896 r  mKeyDebouncer/rCountHigh_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.896    mKeyDebouncer/rCountHigh_reg[0]_i_1_n_4
+    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100M rise edge)    0.000     0.000 r  
@@ -1406,14 +940,378 @@ Slack (MET) :             0.316ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
                          net (fo=99, routed)          0.862     1.989    mKeyDebouncer/iwClk100M_IBUF_BUFG
-    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[11]/C
+    SLICE_X0Y12          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[3]/C
                          clock pessimism             -0.514     1.475    
-    SLICE_X0Y12          FDCE (Hold_fdce_C_D)         0.105     1.580    mKeyDebouncer/rCountHigh_reg[11]
+    SLICE_X0Y12          FDCE (Hold_fdce_C_D)         0.105     1.580    mKeyDebouncer/rCountHigh_reg[3]
   -------------------------------------------------------------------
                          required time                         -1.580    
                          arrival time                           1.896    
   -------------------------------------------------------------------
                          slack                                  0.316    
+
+Slack (MET) :             0.316ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountLow_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountLow_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.421ns  (logic 0.249ns (59.140%)  route 0.172ns (40.860%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.985ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.589     1.472    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y15          FDCE (Prop_fdce_C_Q)         0.141     1.613 r  mKeyDebouncer/rCountLow_reg[15]/Q
+                         net (fo=2, routed)           0.172     1.785    mKeyDebouncer/rCountLow_reg[15]
+    SLICE_X4Y15          LUT2 (Prop_lut2_I0_O)        0.045     1.830 r  mKeyDebouncer/rCountLow[12]_i_2/O
+                         net (fo=1, routed)           0.000     1.830    mKeyDebouncer/rCountLow[12]_i_2_n_0
+    SLICE_X4Y15          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.893 r  mKeyDebouncer/rCountLow_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.893    mKeyDebouncer/rCountLow_reg[12]_i_1_n_4
+    SLICE_X4Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.858     1.985    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y15          FDCE                                         r  mKeyDebouncer/rCountLow_reg[15]/C
+                         clock pessimism             -0.513     1.472    
+    SLICE_X4Y15          FDCE (Hold_fdce_C_D)         0.105     1.577    mKeyDebouncer/rCountLow_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.577    
+                         arrival time                           1.893    
+  -------------------------------------------------------------------
+                         slack                                  0.316    
+
+Slack (MET) :             0.316ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountLow_reg[23]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountLow_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.421ns  (logic 0.249ns (59.140%)  route 0.172ns (40.860%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.983ns
+    Source Clock Delay      (SCD):    1.470ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.587     1.470    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y17          FDCE (Prop_fdce_C_Q)         0.141     1.611 r  mKeyDebouncer/rCountLow_reg[23]/Q
+                         net (fo=2, routed)           0.172     1.783    mKeyDebouncer/rCountLow_reg[23]
+    SLICE_X4Y17          LUT2 (Prop_lut2_I0_O)        0.045     1.828 r  mKeyDebouncer/rCountLow[20]_i_2/O
+                         net (fo=1, routed)           0.000     1.828    mKeyDebouncer/rCountLow[20]_i_2_n_0
+    SLICE_X4Y17          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.891 r  mKeyDebouncer/rCountLow_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.891    mKeyDebouncer/rCountLow_reg[20]_i_1_n_4
+    SLICE_X4Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.856     1.983    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y17          FDCE                                         r  mKeyDebouncer/rCountLow_reg[23]/C
+                         clock pessimism             -0.513     1.470    
+    SLICE_X4Y17          FDCE (Hold_fdce_C_D)         0.105     1.575    mKeyDebouncer/rCountLow_reg[23]
+  -------------------------------------------------------------------
+                         required time                         -1.575    
+                         arrival time                           1.891    
+  -------------------------------------------------------------------
+                         slack                                  0.316    
+
+Slack (MET) :             0.317ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountHigh_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountHigh_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.422ns  (logic 0.249ns (58.995%)  route 0.173ns (41.005%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.986ns
+    Source Clock Delay      (SCD):    1.473ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.590     1.473    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y16          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y16          FDCE (Prop_fdce_C_Q)         0.141     1.614 r  mKeyDebouncer/rCountHigh_reg[19]/Q
+                         net (fo=2, routed)           0.173     1.787    mKeyDebouncer/rCountHigh_reg[19]
+    SLICE_X0Y16          LUT2 (Prop_lut2_I1_O)        0.045     1.832 r  mKeyDebouncer/rCountHigh[16]_i_2/O
+                         net (fo=1, routed)           0.000     1.832    mKeyDebouncer/rCountHigh[16]_i_2_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.895 r  mKeyDebouncer/rCountHigh_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.895    mKeyDebouncer/rCountHigh_reg[16]_i_1_n_4
+    SLICE_X0Y16          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.859     1.986    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y16          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[19]/C
+                         clock pessimism             -0.513     1.473    
+    SLICE_X0Y16          FDCE (Hold_fdce_C_D)         0.105     1.578    mKeyDebouncer/rCountHigh_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.578    
+                         arrival time                           1.895    
+  -------------------------------------------------------------------
+                         slack                                  0.317    
+
+Slack (MET) :             0.317ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountHigh_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountHigh_reg[27]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.422ns  (logic 0.249ns (58.995%)  route 0.173ns (41.005%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.984ns
+    Source Clock Delay      (SCD):    1.471ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.588     1.471    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y18          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y18          FDCE (Prop_fdce_C_Q)         0.141     1.612 r  mKeyDebouncer/rCountHigh_reg[27]/Q
+                         net (fo=2, routed)           0.173     1.785    mKeyDebouncer/rCountHigh_reg[27]
+    SLICE_X0Y18          LUT2 (Prop_lut2_I1_O)        0.045     1.830 r  mKeyDebouncer/rCountHigh[24]_i_2/O
+                         net (fo=1, routed)           0.000     1.830    mKeyDebouncer/rCountHigh[24]_i_2_n_0
+    SLICE_X0Y18          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.893 r  mKeyDebouncer/rCountHigh_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.893    mKeyDebouncer/rCountHigh_reg[24]_i_1_n_4
+    SLICE_X0Y18          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.857     1.984    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y18          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[27]/C
+                         clock pessimism             -0.513     1.471    
+    SLICE_X0Y18          FDCE (Hold_fdce_C_D)         0.105     1.576    mKeyDebouncer/rCountHigh_reg[27]
+  -------------------------------------------------------------------
+                         required time                         -1.576    
+                         arrival time                           1.893    
+  -------------------------------------------------------------------
+                         slack                                  0.317    
+
+Slack (MET) :             0.317ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountHigh_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountHigh_reg[31]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.422ns  (logic 0.249ns (58.995%)  route 0.173ns (41.005%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.983ns
+    Source Clock Delay      (SCD):    1.470ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.587     1.470    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y19          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y19          FDCE (Prop_fdce_C_Q)         0.141     1.611 r  mKeyDebouncer/rCountHigh_reg[31]/Q
+                         net (fo=2, routed)           0.173     1.784    mKeyDebouncer/rCountHigh_reg[31]
+    SLICE_X0Y19          LUT2 (Prop_lut2_I1_O)        0.045     1.829 r  mKeyDebouncer/rCountHigh[28]_i_2/O
+                         net (fo=1, routed)           0.000     1.829    mKeyDebouncer/rCountHigh[28]_i_2_n_0
+    SLICE_X0Y19          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.892 r  mKeyDebouncer/rCountHigh_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.892    mKeyDebouncer/rCountHigh_reg[28]_i_1_n_4
+    SLICE_X0Y19          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.856     1.983    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X0Y19          FDCE                                         r  mKeyDebouncer/rCountHigh_reg[31]/C
+                         clock pessimism             -0.513     1.470    
+    SLICE_X0Y19          FDCE (Hold_fdce_C_D)         0.105     1.575    mKeyDebouncer/rCountHigh_reg[31]
+  -------------------------------------------------------------------
+                         required time                         -1.575    
+                         arrival time                           1.892    
+  -------------------------------------------------------------------
+                         slack                                  0.317    
+
+Slack (MET) :             0.317ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountLow_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountLow_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.422ns  (logic 0.249ns (58.996%)  route 0.173ns (41.005%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.986ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.589     1.472    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y14          FDCE (Prop_fdce_C_Q)         0.141     1.613 r  mKeyDebouncer/rCountLow_reg[11]/Q
+                         net (fo=2, routed)           0.173     1.786    mKeyDebouncer/rCountLow_reg[11]
+    SLICE_X4Y14          LUT2 (Prop_lut2_I0_O)        0.045     1.831 r  mKeyDebouncer/rCountLow[8]_i_2/O
+                         net (fo=1, routed)           0.000     1.831    mKeyDebouncer/rCountLow[8]_i_2_n_0
+    SLICE_X4Y14          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.894 r  mKeyDebouncer/rCountLow_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.894    mKeyDebouncer/rCountLow_reg[8]_i_1_n_4
+    SLICE_X4Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.859     1.986    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y14          FDCE                                         r  mKeyDebouncer/rCountLow_reg[11]/C
+                         clock pessimism             -0.514     1.472    
+    SLICE_X4Y14          FDCE (Hold_fdce_C_D)         0.105     1.577    mKeyDebouncer/rCountLow_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.577    
+                         arrival time                           1.894    
+  -------------------------------------------------------------------
+                         slack                                  0.317    
+
+Slack (MET) :             0.317ns  (arrival time - required time)
+  Source:                 mKeyDebouncer/rCountLow_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            mKeyDebouncer/rCountLow_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by clk100M  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100M
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk100M rise@0.000ns - clk100M rise@0.000ns)
+  Data Path Delay:        0.422ns  (logic 0.249ns (58.995%)  route 0.173ns (41.005%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.984ns
+    Source Clock Delay      (SCD):    1.471ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.588     1.471    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y16          FDCE (Prop_fdce_C_Q)         0.141     1.612 r  mKeyDebouncer/rCountLow_reg[19]/Q
+                         net (fo=2, routed)           0.173     1.785    mKeyDebouncer/rCountLow_reg[19]
+    SLICE_X4Y16          LUT2 (Prop_lut2_I0_O)        0.045     1.830 r  mKeyDebouncer/rCountLow[16]_i_2/O
+                         net (fo=1, routed)           0.000     1.830    mKeyDebouncer/rCountLow[16]_i_2_n_0
+    SLICE_X4Y16          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     1.893 r  mKeyDebouncer/rCountLow_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.893    mKeyDebouncer/rCountLow_reg[16]_i_1_n_4
+    SLICE_X4Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100M rise edge)    0.000     0.000 r  
+    W5                                                0.000     0.000 r  iwClk100M (IN)
+                         net (fo=0)                   0.000     0.000    iwClk100M
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  iwClk100M_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    iwClk100M_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  iwClk100M_IBUF_BUFG_inst/O
+                         net (fo=99, routed)          0.857     1.984    mKeyDebouncer/iwClk100M_IBUF_BUFG
+    SLICE_X4Y16          FDCE                                         r  mKeyDebouncer/rCountLow_reg[19]/C
+                         clock pessimism             -0.513     1.471    
+    SLICE_X4Y16          FDCE (Hold_fdce_C_D)         0.105     1.576    mKeyDebouncer/rCountLow_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.576    
+                         arrival time                           1.893    
+  -------------------------------------------------------------------
+                         slack                                  0.317    
 
 
 
@@ -1428,35 +1326,35 @@ Sources:            { iwClk100M }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
 Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1  iwClk100M_IBUF_BUFG_inst/I
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y30   mDisplayDriver/mClockDivider/orNewClk_reg/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y27   mDisplayDriver/mClockDivider/rCounter_reg[0]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y32   mDisplayDriver/mClockDivider/rCounter_reg[10]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y29   mDisplayDriver/mClockDivider/rCounter_reg[11]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y29   mDisplayDriver/mClockDivider/rCounter_reg[12]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y30   mDisplayDriver/mClockDivider/rCounter_reg[13]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y30   mDisplayDriver/mClockDivider/rCounter_reg[14]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y31   mDisplayDriver/mClockDivider/rCounter_reg[15]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X54Y32   mDisplayDriver/mClockDivider/rCounter_reg[16]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X56Y31   mDisplayDriver/mClockDivider/rCounter_reg[18]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X56Y31   mDisplayDriver/mClockDivider/rCounter_reg[19]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X56Y31   mDisplayDriver/mClockDivider/rCounter_reg[29]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X56Y31   mDisplayDriver/mClockDivider/rCounter_reg[30]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X3Y19    mKeyDebouncer/orKeyOut_reg_C/C
-Low Pulse Width   Slow    FDPE/C   n/a            0.500         5.000       4.500      SLICE_X4Y19    mKeyDebouncer/orKeyOut_reg_P/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y10    mKeyDebouncer/rCountHigh_reg[0]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y12    mKeyDebouncer/rCountHigh_reg[10]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y12    mKeyDebouncer/rCountHigh_reg[11]/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    mKeyDebouncer/rCountHigh_reg[12]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y30   mDisplayDriver/mClockDivider/orNewClk_reg/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y27   mDisplayDriver/mClockDivider/rCounter_reg[0]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y32   mDisplayDriver/mClockDivider/rCounter_reg[10]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y29   mDisplayDriver/mClockDivider/rCounter_reg[11]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y29   mDisplayDriver/mClockDivider/rCounter_reg[12]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y30   mDisplayDriver/mClockDivider/rCounter_reg[13]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y30   mDisplayDriver/mClockDivider/rCounter_reg[14]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y32   mDisplayDriver/mClockDivider/rCounter_reg[16]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y32   mDisplayDriver/mClockDivider/rCounter_reg[17]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X54Y28   mDisplayDriver/mClockDivider/rCounter_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X55Y25   mDisplayDriver/mClockDivider/orNewClk_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X57Y19   mDisplayDriver/mClockDivider/rCounter_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X57Y20   mDisplayDriver/mClockDivider/rCounter_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X55Y21   mDisplayDriver/mClockDivider/rCounter_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X55Y21   mDisplayDriver/mClockDivider/rCounter_reg[12]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X55Y22   mDisplayDriver/mClockDivider/rCounter_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[15]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X55Y23   mDisplayDriver/mClockDivider/rCounter_reg[16]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y25   mDisplayDriver/mClockDivider/orNewClk_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[14]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[15]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y23   mDisplayDriver/mClockDivider/rCounter_reg[17]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y23   mDisplayDriver/mClockDivider/rCounter_reg[18]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y23   mDisplayDriver/mClockDivider/rCounter_reg[19]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y24   mDisplayDriver/mClockDivider/rCounter_reg[21]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y25   mDisplayDriver/mClockDivider/rCounter_reg[25]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y25   mDisplayDriver/mClockDivider/rCounter_reg[31]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X5Y19    mKeyDebouncer/orKeyOut_reg_C/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y19   mDisplayDriver/mClockDivider/rCounter_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y20   mDisplayDriver/mClockDivider/rCounter_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y21   mDisplayDriver/mClockDivider/rCounter_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y21   mDisplayDriver/mClockDivider/rCounter_reg[12]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y22   mDisplayDriver/mClockDivider/rCounter_reg[13]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[14]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y22   mDisplayDriver/mClockDivider/rCounter_reg[15]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X55Y19   mDisplayDriver/mClockDivider/rCounter_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y19   mDisplayDriver/mClockDivider/rCounter_reg[2]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X57Y19   mDisplayDriver/mClockDivider/rCounter_reg[3]/C
 
 
 
