@@ -1,5 +1,5 @@
 // Verilog netlist created by TD v4.2.217
-// Wed Dec  5 17:50:08 2018
+// Sun Dec  9 19:27:46 2018
 
 `timescale 1ns / 1ps
 module dram  // /home/icenowy/git-repos/ice-risc/al_ip/dram.v(14)
@@ -837,9 +837,9 @@ module dram  // /home/icenowy/git-repos/ice-risc/al_ip/dram.v(14)
     .do({dram_do_i1_019,dram_do_i1_018,dram_do_i1_017,dram_do_i1_016}));
   EG_LOGIC_DRAM16X4 #(
     .INIT_D0(16'b0000001100111010),
-    .INIT_D1(16'b0000000000010100),
-    .INIT_D2(16'b0000001010010101),
-    .INIT_D3(16'b0000001010000101))
+    .INIT_D1(16'b0000000000010110),
+    .INIT_D2(16'b0000001010010111),
+    .INIT_D3(16'b0000001010000111))
     dram_r1_c5 (
     .di(di[23:20]),
     .raddr(raddr[3:0]),
@@ -848,10 +848,10 @@ module dram  // /home/icenowy/git-repos/ice-risc/al_ip/dram.v(14)
     .we(we_0_1),
     .do({dram_do_i1_023,dram_do_i1_022,dram_do_i1_021,dram_do_i1_020}));
   EG_LOGIC_DRAM16X4 #(
-    .INIT_D0(16'b0000001000000000),
-    .INIT_D1(16'b0000001010000101),
-    .INIT_D2(16'b0000000000000101),
-    .INIT_D3(16'b0000001010000101))
+    .INIT_D0(16'b0000001000000010),
+    .INIT_D1(16'b0000001010000111),
+    .INIT_D2(16'b0000000000000111),
+    .INIT_D3(16'b0000001010000111))
     dram_r1_c6 (
     .di(di[27:24]),
     .raddr(raddr[3:0]),
@@ -860,9 +860,9 @@ module dram  // /home/icenowy/git-repos/ice-risc/al_ip/dram.v(14)
     .we(we_0_1),
     .do({dram_do_i1_027,dram_do_i1_026,dram_do_i1_025,dram_do_i1_024}));
   EG_LOGIC_DRAM16X4 #(
-    .INIT_D0(16'b0000001000000101),
-    .INIT_D1(16'b0000001000000101),
-    .INIT_D2(16'b0000001000000101),
+    .INIT_D0(16'b0000001000000111),
+    .INIT_D1(16'b0000001000000111),
+    .INIT_D2(16'b0000001000000111),
     .INIT_D3(16'b0000001000000101))
     dram_r1_c7 (
     .di(di[31:28]),

@@ -17,7 +17,7 @@ wire wnRst = iwnKey;
 wire wNewClk;
 
 clock_divider #(
-	.pFactor(32'd262144)
+	.pFactor(32'd512)
 )mClockDivider(iwClk24M, wnRst, wNewClk);
 
 dram_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
