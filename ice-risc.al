@@ -30,7 +30,7 @@
             <File>al_ip/dram.v</File>
         </Verilog>
         <ADC_FILE>io.adc</ADC_FILE>
-        <SDC_FILE/>
+        <SDC_FILE>clocks.sdc</SDC_FILE>
         <CWC_FILE/>
     </Source_Files>
     <TOP_MODULE>
@@ -39,7 +39,7 @@
         <CREATEINDEX>auto</CREATEINDEX>
     </TOP_MODULE>
     <Project_Settings>
-        <Step_Last_Change>2018-12-09 19:32:33</Step_Last_Change>
+        <Step_Last_Change>2018-12-10 23:06:34</Step_Last_Change>
         <Current_Step>60</Current_Step>
         <Step_Status>true</Step_Status>
     </Project_Settings>
