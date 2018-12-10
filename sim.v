@@ -13,7 +13,7 @@ wire [31:0]wLastData;
 reg rClk;
 reg rnRst;
 
-simple_memory mSimMemory(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
+last_word_memory mSimMemory(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
 ice_risc_rv #(
 	.pMemReadWait(1)
