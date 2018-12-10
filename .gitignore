@@ -19,3 +19,5 @@ ice_risc.bit
 *.db
 .*.al.bak
 *.bit
+*.timing
+*.tsm
