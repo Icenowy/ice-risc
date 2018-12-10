@@ -1,4 +1,4 @@
-module dram_memory(
+module bram_memory(
 	input wire iwClk,
 	input wire iwnRst,
 
@@ -17,8 +17,6 @@ wire [31:0]wWriteData;
 
 wire [31:0]wWriteAddr;
 
-assign wWriteEnable = iwnRst ? (iwWstrb == 4'b1111) : 1;
-
 assign wWriteData = iwnRst ? iwWriteData : 0;
 
 assign wWriteAddr = iwnRst ? (iwWriteAddr >> 2) : 43;
@@ -27,14 +25,23 @@ reg [31:0]rLastWord;
 
 assign owLastData = rLastWord;
 
-dram mDram(wWriteData, wWriteAddr[5:0], wWriteEnable, ~iwClk, owReadData, iwReadAddr[7:2]);
+bram mBram(wWriteData, wWriteAddr[5:0], iwClk, ~iwnRst, iwWstrb, owReadData, iwReadAddr[7:2], iwClk, ~iwnRst);
 
 always @(negedge iwClk or negedge iwnRst) begin
 	if (!iwnRst) begin
 		rLastWord <= 0;
 	end else begin
-		if (iwWstrb == 4'b1111 && (iwWriteAddr >> 2) == 43) begin
-			rLastWord <= iwWriteData;
+		if (iwWstrb & 4'b1 && (iwWriteAddr >> 2) == 43) begin
+			rLastWord[7:0] <= iwWriteData[7:0];
+		end
+		if (iwWstrb & 4'b10 && (iwWriteAddr >> 2) == 43) begin
+			rLastWord[15:8] <= iwWriteData[15:8];
+		end
+		if (iwWstrb & 4'b100 && (iwWriteAddr >> 2) == 43) begin
+			rLastWord[23:16] <= iwWriteData[23:16];
+		end
+		if (iwWstrb & 4'b1000 && (iwWriteAddr >> 2) == 43) begin
+			rLastWord[31:24] <= iwWriteData[31:24];
 		end
 	end
 end

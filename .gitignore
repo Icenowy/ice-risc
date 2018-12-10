@@ -21,3 +21,4 @@ ice_risc.bit
 *.bit
 *.timing
 *.tsm
+*.bid

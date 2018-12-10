@@ -20,7 +20,7 @@ clock_divider #(
 	.pFactor(32'd512)
 )mClockDivider(iwClk24M, wnRst, wNewClk);
 
-dram_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
+bram_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
 ice_risc_rv mIceRiscRV(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 

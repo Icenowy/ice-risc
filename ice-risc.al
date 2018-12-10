@@ -2,7 +2,7 @@
 <Project>
     <Project_Created_Time>2018-12-05 17:10:19</Project_Created_Time>
     <TD_Version>4.2.217</TD_Version>
-    <UCode>00000000</UCode>
+    <UCode>11000010</UCode>
     <Name>ice-risc</Name>
     <HardWare>
         <Family>EG4</Family>
@@ -26,8 +26,8 @@
             <File>sign_extend_13_32.v</File>
             <File>sign_extend_16_32.v</File>
             <File>sign_extend_21_32.v</File>
-            <File>dram_memory.v</File>
-            <File>al_ip/dram.v</File>
+            <File>bram_memory.v</File>
+            <File>al_ip/bram.v</File>
         </Verilog>
         <ADC_FILE>io.adc</ADC_FILE>
         <SDC_FILE>clocks.sdc</SDC_FILE>
@@ -36,10 +36,10 @@
     <TOP_MODULE>
         <LABEL/>
         <MODULE>top</MODULE>
-        <CREATEINDEX>auto</CREATEINDEX>
+        <CREATEINDEX>user</CREATEINDEX>
     </TOP_MODULE>
     <Project_Settings>
-        <Step_Last_Change>2018-12-10 23:06:34</Step_Last_Change>
+        <Step_Last_Change>2018-12-11 00:47:29</Step_Last_Change>
         <Current_Step>60</Current_Step>
         <Step_Status>true</Step_Status>
     </Project_Settings>
