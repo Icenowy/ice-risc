@@ -28,7 +28,7 @@ initial begin
 	`include "simple_memory_rom.v"
 end
 
-always @(negedge iwClk or negedge iwnRst) begin
+always @(posedge iwClk or negedge iwnRst) begin
 	if (!iwnRst) begin
 		rMemory[pWords * 4 - 1] = 0;
 		rMemory[pWords * 4 - 2] = 0;
