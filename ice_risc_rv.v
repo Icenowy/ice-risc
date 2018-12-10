@@ -1,4 +1,6 @@
-module ice_risc_rv(
+module ice_risc_rv#(
+	parameter pMemReadWait = 1'b1
+)(
 	input wire iwClk,
 	input wire iwnRst,
 
@@ -12,7 +14,9 @@ module ice_risc_rv(
 
 wire wHalt;
 
-control_rv mMainControlUnit(iwClk, iwnRst, owReadAddr,
+control_rv #(
+	.pMemReadWait(pMemReadWait)
+)mMainControlUnit(iwClk, iwnRst, owReadAddr,
 			    owWriteAddr, owWriteData, owWstrb,
 			    iwReadData, wHalt);
 
