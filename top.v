@@ -16,9 +16,12 @@ wire wnRst = iwnKey;
 
 wire wNewClk;
 
-clock_divider #(
-	.pFactor(32'd2)
-)mClockDivider(iwClk50M, wnRst, wNewClk);
+wire wPllOut;
+wire wPllStable;
+
+main_pll mMainPll(~wnRst, iwClk50M, wPllOut, wPllStable);
+
+assign wNewClk = wPllOut;
 
 last_word_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
