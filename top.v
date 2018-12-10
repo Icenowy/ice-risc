@@ -17,7 +17,7 @@ wire wnRst = iwnKey;
 wire wNewClk;
 
 clock_divider #(
-	.pFactor(32'd1024)
+	.pFactor(32'd2)
 )mClockDivider(iwClk50M, wnRst, wNewClk);
 
 simple_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
