@@ -12,10 +12,8 @@ test.txt
 gen_simple_memory_rom
 gen_simple_memory_rom.o
 
-td_*.log
-full.v
-ice_risc.bit
-*.area
-*.db
-.*.al.bak
-*.bit
+incremental_db/
+db/
+output_files/
+simulation/
+*.bak

@@ -34,6 +34,7 @@ always @(negedge iwClk or negedge iwnRst) begin
 		rMemory[pWords * 4 - 2] = 0;
 		rMemory[pWords * 4 - 3] = 0;
 		rMemory[pWords * 4 - 4] = 0;
+		`include "simple_memory_rom.v"
 	end else begin
 		if (iwWstrb & 4'b1)
 			rMemory[iwWriteAddr] = iwWriteData[7:0];

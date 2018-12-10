@@ -1,7 +1,7 @@
 module top(
-    input wire iwClk24M,
+    input wire iwClk50M,
     input wire iwnKey,
-    output wire [2:0]ownLed
+    output wire [7:0]owLed
 );
 
 wire [31:0]wReadAddr;
@@ -17,13 +17,13 @@ wire wnRst = iwnKey;
 wire wNewClk;
 
 clock_divider #(
-	.pFactor(32'd512)
-)mClockDivider(iwClk24M, wnRst, wNewClk);
+	.pFactor(32'd1024)
+)mClockDivider(iwClk50M, wnRst, wNewClk);
 
-dram_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
+simple_memory mSimMemory(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
 ice_risc_rv mIceRiscRV(wNewClk, wnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 
-assign ownLed = ~wLastData[2:0];
+assign owLed = wLastData[7:0];
 
 endmodule
