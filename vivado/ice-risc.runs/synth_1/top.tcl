@@ -50,7 +50,6 @@ read_verilog -library xil_defaultlib {
   /home/icenowy/git-repos/ice-risc/ice_risc_rv.v
   /home/icenowy/git-repos/ice-risc/instr_decode_rv.v
   /home/icenowy/git-repos/ice-risc/instr_split_rv.v
-  /home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v
   /home/icenowy/git-repos/ice-risc/next_pc_rv.v
   /home/icenowy/git-repos/ice-risc/pc.v
   /home/icenowy/git-repos/ice-risc/regfile_32.v

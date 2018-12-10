@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Dec  9 20:30:28 2018
-# Process ID: 35377
+# Start of session at: Mon Dec 10 23:42:54 2018
+# Process ID: 3904
 # Current directory: /home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1/top.vds
@@ -15,24 +15,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 35406 
+INFO: Helper process launched with PID 3911 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.219 ; gain = 74.629 ; free physical = 310 ; free virtual = 4678
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1359.219 ; gain = 74.629 ; free physical = 2926 ; free virtual = 5640
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/icenowy/git-repos/ice-risc/vivado/top.v:1]
-INFO: [Synth 8-6157] synthesizing module 'key_debouncer' [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:23]
-	Parameter pClockDividerFactor bound to: 32'b00000000000011110100001001000000 
-	Parameter pSampleTime bound to: 32'b00000000000000000000000000001111 
-WARNING: [Synth 8-5788] Register orKeyOut_reg in module key_debouncer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'key_debouncer' (1#1) [/home/icenowy/git-repos/ice-risc/vivado/key_debouncer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
+	Parameter pFactor bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
 INFO: [Synth 8-6157] synthesizing module 'digital_display_driver' [/home/icenowy/git-repos/ice-risc/vivado/digital_display_driver.v:1]
 	Parameter pClockDividerFactor bound to: 32'b00000000000000000000010000000000 
-INFO: [Synth 8-6157] synthesizing module 'clock_divider' [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
 	Parameter pFactor bound to: 32'b00000000000000000000010000000000 
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'digital_display_driver' (3#1) [/home/icenowy/git-repos/ice-risc/vivado/digital_display_driver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (1#1) [/home/icenowy/git-repos/ice-risc/vivado/clock_divider.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'digital_display_driver' (2#1) [/home/icenowy/git-repos/ice-risc/vivado/digital_display_driver.v:1]
 INFO: [Synth 8-6157] synthesizing module 'simple_memory' [/home/icenowy/git-repos/ice-risc/simple_memory.v:1]
-	Parameter pWords bound to: 128 - type: integer 
+	Parameter pWords bound to: 44 - type: integer 
 WARNING: [Synth 8-5788] Register rMemory_reg[0] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 WARNING: [Synth 8-5788] Register rMemory_reg[1] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 WARNING: [Synth 8-5788] Register rMemory_reg[2] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
@@ -132,48 +130,39 @@ WARNING: [Synth 8-5788] Register rMemory_reg[95] in module simple_memory is has 
 WARNING: [Synth 8-5788] Register rMemory_reg[96] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 WARNING: [Synth 8-5788] Register rMemory_reg[97] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 WARNING: [Synth 8-5788] Register rMemory_reg[98] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
+WARNING: [Synth 8-5788] Register rMemory_reg[99] in module simple_memory is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/icenowy/git-repos/ice-risc/simple_memory.v:17]
 INFO: [Common 17-14] Message 'Synth 8-5788' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'simple_memory' (4#1) [/home/icenowy/git-repos/ice-risc/simple_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'simple_memory' (3#1) [/home/icenowy/git-repos/ice-risc/simple_memory.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ice_risc_rv' [/home/icenowy/git-repos/ice-risc/ice_risc_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'control_rv' [/home/icenowy/git-repos/ice-risc/control_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'alu' [/home/icenowy/git-repos/ice-risc/alu.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (5#1) [/home/icenowy/git-repos/ice-risc/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (4#1) [/home/icenowy/git-repos/ice-risc/alu.v:1]
 INFO: [Synth 8-6157] synthesizing module 'regfile_32' [/home/icenowy/git-repos/ice-risc/regfile_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile_32' (6#1) [/home/icenowy/git-repos/ice-risc/regfile_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile_32' (5#1) [/home/icenowy/git-repos/ice-risc/regfile_32.v:1]
 INFO: [Synth 8-6157] synthesizing module 'next_pc_rv' [/home/icenowy/git-repos/ice-risc/next_pc_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extend_21_32' [/home/icenowy/git-repos/ice-risc/sign_extend_21_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend_21_32' (7#1) [/home/icenowy/git-repos/ice-risc/sign_extend_21_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_21_32' (6#1) [/home/icenowy/git-repos/ice-risc/sign_extend_21_32.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extend_13_32' [/home/icenowy/git-repos/ice-risc/sign_extend_13_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend_13_32' (8#1) [/home/icenowy/git-repos/ice-risc/sign_extend_13_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_13_32' (7#1) [/home/icenowy/git-repos/ice-risc/sign_extend_13_32.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extend_12_32' [/home/icenowy/git-repos/ice-risc/sign_extend_12_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend_12_32' (9#1) [/home/icenowy/git-repos/ice-risc/sign_extend_12_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'next_pc_rv' (10#1) [/home/icenowy/git-repos/ice-risc/next_pc_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_12_32' (8#1) [/home/icenowy/git-repos/ice-risc/sign_extend_12_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'next_pc_rv' (9#1) [/home/icenowy/git-repos/ice-risc/next_pc_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'pc' [/home/icenowy/git-repos/ice-risc/pc.v:1]
 	Parameter pResetPc bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pc' (11#1) [/home/icenowy/git-repos/ice-risc/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (10#1) [/home/icenowy/git-repos/ice-risc/pc.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sub_word_d_mem_read_rv' [/home/icenowy/git-repos/ice-risc/sub_word_d_mem_read_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extend_8_32' [/home/icenowy/git-repos/ice-risc/sign_extend_8_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend_8_32' (12#1) [/home/icenowy/git-repos/ice-risc/sign_extend_8_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_8_32' (11#1) [/home/icenowy/git-repos/ice-risc/sign_extend_8_32.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extend_16_32' [/home/icenowy/git-repos/ice-risc/sign_extend_16_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend_16_32' (13#1) [/home/icenowy/git-repos/ice-risc/sign_extend_16_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sub_word_d_mem_read_rv' (14#1) [/home/icenowy/git-repos/ice-risc/sub_word_d_mem_read_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend_16_32' (12#1) [/home/icenowy/git-repos/ice-risc/sign_extend_16_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sub_word_d_mem_read_rv' (13#1) [/home/icenowy/git-repos/ice-risc/sub_word_d_mem_read_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'instr_decode_rv' [/home/icenowy/git-repos/ice-risc/instr_decode_rv.v:1]
 INFO: [Synth 8-6157] synthesizing module 'instr_split_rv' [/home/icenowy/git-repos/ice-risc/instr_split_rv.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'instr_split_rv' (15#1) [/home/icenowy/git-repos/ice-risc/instr_split_rv.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'instr_decode_rv' (16#1) [/home/icenowy/git-repos/ice-risc/instr_decode_rv.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'control_rv' (17#1) [/home/icenowy/git-repos/ice-risc/control_rv.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ice_risc_rv' (18#1) [/home/icenowy/git-repos/ice-risc/ice_risc_rv.v:1]
-WARNING: [Synth 8-567] referenced signal 'rStateNext' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'rState' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wNextPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wPc' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wReadReg1Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wReadReg1' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wReadReg2Value' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wReadReg2' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wWriteRegValue' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-WARNING: [Synth 8-567] referenced signal 'wAluResult' should be on the sensitivity list [/home/icenowy/git-repos/ice-risc/vivado/top.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [/home/icenowy/git-repos/ice-risc/vivado/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instr_split_rv' (14#1) [/home/icenowy/git-repos/ice-risc/instr_split_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instr_decode_rv' (15#1) [/home/icenowy/git-repos/ice-risc/instr_decode_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control_rv' (16#1) [/home/icenowy/git-repos/ice-risc/control_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ice_risc_rv' (17#1) [/home/icenowy/git-repos/ice-risc/ice_risc_rv.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (18#1) [/home/icenowy/git-repos/ice-risc/vivado/top.v:1]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[31]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[30]
 WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[29]
@@ -227,6 +216,10 @@ WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[12]
 WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[11]
 WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[10]
 WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[9]
+WARNING: [Synth 8-3331] design simple_memory has unconnected port iwReadAddr[8]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[15]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[14]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[13]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[12]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[11]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[10]
@@ -239,8 +232,9 @@ WARNING: [Synth 8-3331] design top has unconnected port iwSw[4]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[3]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[2]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[1]
+WARNING: [Synth 8-3331] design top has unconnected port iwKey
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 190 ; free virtual = 4540
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1457.844 ; gain = 173.254 ; free physical = 2850 ; free virtual = 5576
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -253,10 +247,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 221 ; free virtual = 4571
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.844 ; gain = 173.254 ; free physical = 2856 ; free virtual = 5586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1561.414 ; gain = 276.824 ; free physical = 221 ; free virtual = 4571
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.844 ; gain = 173.254 ; free physical = 2856 ; free virtual = 5586
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -276,26 +270,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1895.703 ; gain = 0.000 ; free physical = 126 ; free virtual = 4251
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1792.133 ; gain = 0.000 ; free physical = 2398 ; free virtual = 5214
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 275 ; free virtual = 4399
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1792.133 ; gain = 507.543 ; free physical = 2498 ; free virtual = 5313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 275 ; free virtual = 4399
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1792.133 ; gain = 507.543 ; free physical = 2498 ; free virtual = 5313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 277 ; free virtual = 4401
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1792.133 ; gain = 507.543 ; free physical = 2499 ; free virtual = 5315
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "orKeyOut" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "orKeyOut" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "orKeyOut" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "rCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "orNewClk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "rCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "orNewClk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "rMemory_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -393,6 +386,7 @@ INFO: [Synth 8-5545] ROM "rMemory_reg[45]" won't be mapped to RAM because addres
 INFO: [Synth 8-5545] ROM "rMemory_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "rMemory_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "rMemory_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "rMemory_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "rRegFile_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rRegFile_reg[30]" won't be mapped to RAM because it is too sparse
@@ -433,58 +427,53 @@ INFO: [Synth 8-5544] ROM "rInstruction" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "rAluResult" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rReadData" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:19 ; elapsed = 00:03:35 . Memory (MB): peak = 1895.703 ; gain = 611.113 ; free physical = 168 ; free virtual = 4292
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 1792.133 ; gain = 507.543 ; free physical = 2463 ; free virtual = 5281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------+------------+----------+
-|      |RTL Partition      |Replication |Instances |
-+------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     40245|
-|2     |simple_memory__GB1 |           1|     12131|
-|3     |simple_memory__GB2 |           1|     15467|
-|4     |simple_memory__GB3 |           1|     21361|
-|5     |simple_memory__GB4 |           1|     26263|
-|6     |simple_memory__GB5 |           1|     34032|
-|7     |top__GC0           |           1|     10295|
-+------+-------------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |top__GB0      |           1|     52130|
+|2     |top__GB1      |           1|      9566|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 7     
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 41    
-	                8 Bit    Registers := 512   
+	               32 Bit    Registers := 42    
+	                8 Bit    Registers := 176   
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 14    
+	   2 Input     32 Bit        Muxes := 15    
 	  33 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2303  
-	   3 Input      8 Bit        Muxes := 207   
+	   2 Input      8 Bit        Muxes := 791   
+	   3 Input      8 Bit        Muxes := 72    
 	   2 Input      5 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 8     
-	   2 Input      4 Bit        Muxes := 16    
+	   4 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 12    
 	  10 Input      4 Bit        Muxes := 1     
 	   6 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	  12 Input      3 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 17    
+	   3 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 2873  
-	   3 Input      1 Bit        Muxes := 257   
+	   2 Input      1 Bit        Muxes := 1022  
+	   3 Input      1 Bit        Muxes := 89    
 	   7 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -494,28 +483,7 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module top 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      4 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 4     
-Module simple_memory 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 512   
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 2303  
-	   3 Input      8 Bit        Muxes := 207   
-	   3 Input      2 Bit        Muxes := 15    
-	   2 Input      1 Bit        Muxes := 2815  
-	   3 Input      1 Bit        Muxes := 256   
-Module key_debouncer 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 5     
-Module clock_divider 
+Module clock_divider__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
@@ -533,6 +501,16 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 2     
+Module simple_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 176   
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 791   
+	   3 Input      8 Bit        Muxes := 72    
+	   3 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 967   
+	   3 Input      1 Bit        Muxes := 88    
 Module alu 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -600,8 +578,18 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
 	   3 Input      1 Bit        Muxes := 1     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -614,10 +602,13 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[15]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[14]
+WARNING: [Synth 8-3331] design top has unconnected port iwSw[13]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[12]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[11]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[10]
@@ -630,93 +621,50 @@ WARNING: [Synth 8-3331] design top has unconnected port iwSw[4]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[3]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[2]
 WARNING: [Synth 8-3331] design top has unconnected port iwSw[1]
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[31]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[30]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[29]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[28]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[27]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[26]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[25]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[24]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[23]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[22]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[21]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[20]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[19]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[18]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[17]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[16]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[15]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[14]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[13]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[12]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[11]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[10]
-WARNING: [Synth 8-3331] design sub_word_d_mem_read_rv has unconnected port iwAddress[9]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design top has unconnected port iwKey
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:51 ; elapsed = 00:07:31 . Memory (MB): peak = 1899.625 ; gain = 615.035 ; free physical = 441 ; free virtual = 2629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 1857.133 ; gain = 572.543 ; free physical = 2412 ; free virtual = 5248
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------+------------+----------+
-|      |RTL Partition      |Replication |Instances |
-+------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     19523|
-|2     |simple_memory__GB1 |           1|      3817|
-|3     |simple_memory__GB2 |           1|      4187|
-|4     |simple_memory__GB3 |           1|      4231|
-|5     |simple_memory__GB4 |           1|      6490|
-|6     |simple_memory__GB5 |           1|      4380|
-|7     |top__GC0           |           1|      6460|
-+------+-------------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |top__GB0      |           1|     13532|
+|2     |top__GB1      |           1|      5978|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:59 ; elapsed = 00:07:42 . Memory (MB): peak = 1899.625 ; gain = 615.035 ; free physical = 298 ; free virtual = 2523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:02:06 . Memory (MB): peak = 1857.133 ; gain = 572.543 ; free physical = 2296 ; free virtual = 5139
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:06 ; elapsed = 00:07:50 . Memory (MB): peak = 1964.297 ; gain = 679.707 ; free physical = 224 ; free virtual = 2470
+Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:28 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2228 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------+------------+----------+
-|      |RTL Partition      |Replication |Instances |
-+------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     19523|
-|2     |simple_memory__GB1 |           1|      3817|
-|3     |simple_memory__GB2 |           1|      4187|
-|4     |simple_memory__GB3 |           1|      4231|
-|5     |simple_memory__GB4 |           1|      6490|
-|6     |simple_memory__GB5 |           1|      4380|
-|7     |top__GC0           |           1|      6192|
-+------+-------------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |top__GB0      |           1|     13532|
+|2     |top__GB1      |           1|      5849|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:13 ; elapsed = 00:08:07 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 200 ; free virtual = 2335
+Finished Technology Mapping : Time (s): cpu = 00:02:13 ; elapsed = 00:02:33 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2252 ; free virtual = 5098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------+------------+----------+
-|      |RTL Partition      |Replication |Instances |
-+------+-------------------+------------+----------+
-|1     |simple_memory__GB0 |           1|     11332|
-|2     |simple_memory__GB1 |           1|      1941|
-|3     |simple_memory__GB2 |           1|      2438|
-|4     |simple_memory__GB3 |           1|      1551|
-|5     |simple_memory__GB4 |           1|      2436|
-|6     |simple_memory__GB5 |           1|      1678|
-|7     |top__GC0           |           1|      3335|
-+------+-------------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -733,7 +681,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:20 ; elapsed = 00:08:14 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 182 ; free virtual = 2335
+Finished IO Insertion : Time (s): cpu = 00:02:15 ; elapsed = 00:02:35 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2266 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -746,7 +694,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:20 ; elapsed = 00:08:14 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 182 ; free virtual = 2335
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:15 ; elapsed = 00:02:35 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2266 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -758,25 +706,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:22 ; elapsed = 00:08:16 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 180 ; free virtual = 2333
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:15 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2267 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:22 ; elapsed = 00:08:16 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 180 ; free virtual = 2333
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:15 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2267 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:16 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2254 ; free virtual = 5100
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:16 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2254 ; free virtual = 5100
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -793,61 +741,59 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    81|
+|2     |CARRY4 |    73|
 |3     |LUT1   |     4|
-|4     |LUT2   |   686|
-|5     |LUT3   |   276|
-|6     |LUT4   |  1219|
-|7     |LUT5   |  1713|
-|8     |LUT6   | 11695|
-|9     |MUXF7  |  2436|
-|10    |MUXF8  |  1024|
-|11    |FDCE   |  1161|
-|12    |FDPE   |    35|
-|13    |FDRE   |  4434|
-|14    |LDC    |     1|
-|15    |IBUF   |     6|
-|16    |OBUF   |    11|
+|4     |LUT2   |   177|
+|5     |LUT3   |   179|
+|6     |LUT4   |   330|
+|7     |LUT5   |  1318|
+|8     |LUT6   |  3946|
+|9     |MUXF7  |   959|
+|10    |MUXF8  |   280|
+|11    |FDCE   |  1135|
+|12    |FDPE   |    34|
+|13    |FDRE   |  1563|
+|14    |IBUF   |     2|
+|15    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------------------+-----------------------+------+
-|      |Instance             |Module                 |Cells |
-+------+---------------------+-----------------------+------+
-|1     |top                  |                       | 24784|
-|2     |  mDisplayDriver     |digital_display_driver |   109|
-|3     |    mClockDivider    |clock_divider          |    82|
-|4     |  mIceRiscRV         |ice_risc_rv            | 12793|
-|5     |    mMainControlUnit |control_rv             | 12793|
-|6     |      mAlu           |alu                    |   114|
-|7     |      mInstrDec      |instr_decode_rv        |     6|
-|8     |      mNextPc        |next_pc_rv             |     8|
-|9     |      mPc            |pc                     |    33|
-|10    |      mRegFile       |regfile_32             |  1882|
-|11    |  mKeyDebouncer      |key_debouncer          |   169|
-|12    |  mSimMemory         |simple_memory          | 11680|
-+------+---------------------+-----------------------+------+
++------+---------------------+------------------------------+------+
+|      |Instance             |Module                        |Cells |
++------+---------------------+------------------------------+------+
+|1     |top                  |                              | 10013|
+|2     |  mClockDivider      |clock_divider                 |    82|
+|3     |  mDisplayDriver     |digital_display_driver        |    90|
+|4     |    mClockDivider    |clock_divider__parameterized0 |    82|
+|5     |  mIceRiscRV         |ice_risc_rv                   |  5895|
+|6     |    mMainControlUnit |control_rv                    |  5895|
+|7     |      mAlu           |alu                           |    48|
+|8     |      mInstrDec      |instr_decode_rv               |     6|
+|9     |      mNextPc        |next_pc_rv                    |     8|
+|10    |      mPc            |pc                            |   896|
+|11    |      mRegFile       |regfile_32                    |  1919|
+|12    |  mSimMemory         |simple_memory                 |  3931|
++------+---------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:24 ; elapsed = 00:08:18 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 196 ; free virtual = 2347
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:16 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.391 ; gain = 652.801 ; free physical = 2254 ; free virtual = 5100
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:11 ; elapsed = 00:07:58 . Memory (MB): peak = 1976.223 ; gain = 357.344 ; free physical = 2277 ; free virtual = 4434
-Synthesis Optimization Complete : Time (s): cpu = 00:06:25 ; elapsed = 00:08:20 . Memory (MB): peak = 1976.223 ; gain = 691.633 ; free physical = 2281 ; free virtual = 4434
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:05 ; elapsed = 00:02:14 . Memory (MB): peak = 1937.391 ; gain = 318.512 ; free physical = 2312 ; free virtual = 5157
+Synthesis Optimization Complete : Time (s): cpu = 00:02:16 ; elapsed = 00:02:36 . Memory (MB): peak = 1937.398 ; gain = 652.801 ; free physical = 2312 ; free virtual = 5157
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3548 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1314 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  LDC => LDCE: 1 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-195 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
+190 Infos, 186 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:30 ; elapsed = 00:08:26 . Memory (MB): peak = 1988.309 ; gain = 704.090 ; free physical = 2314 ; free virtual = 4460
+synth_design: Time (s): cpu = 00:02:19 ; elapsed = 00:02:39 . Memory (MB): peak = 1937.398 ; gain = 653.180 ; free physical = 2334 ; free virtual = 5180
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/icenowy/git-repos/ice-risc/vivado/ice-risc.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2012.320 ; gain = 0.000 ; free physical = 2324 ; free virtual = 4477
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  9 20:39:06 2018...
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1961.402 ; gain = 0.000 ; free physical = 2331 ; free virtual = 5179
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 10 23:45:43 2018...
