@@ -36,9 +36,11 @@
 
 /*
  * 3'b000 - IF state (Instruction Fetch)
+ * 3'b005 - IF_READ_WAIT state (Instruction Fetch READ WAITing cycle)
  * 3'b001 - ID state (Instruction Decode)
  * 3'b002 - EXE state (EXEcution)
  * 3'b003 - MEM state (MEMory access)
+ * 3'b006 - MEM_READ_WAIT state (MEMory READ WAITing cycle)
  * 3'b004 - WB state (Write Back)
  */
 `define STATE_IF		3'b000
@@ -46,3 +48,5 @@
 `define STATE_EXE		3'b010
 `define STATE_MEM		3'b011
 `define STATE_WB		3'b100
+`define STATE_IF_READ_WAIT	3'b101
+`define STATE_MEM_READ_WAIT	3'b110

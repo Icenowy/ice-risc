@@ -9,15 +9,10 @@ module simple_memory#(
 	input wire [31:0]iwWriteData,
 	input wire [3:0]iwWstrb,
 
-	output wire [31:0]owReadData,
+	output reg [31:0]orReadData,
 	output wire [31:0]owLastData
 );
 reg [7:0]rMemory[0:pWords * 4 - 1];
-
-assign owReadData[7:0] = rMemory[iwReadAddr];
-assign owReadData[15:8] = rMemory[iwReadAddr + 1];
-assign owReadData[23:16] = rMemory[iwReadAddr + 2];
-assign owReadData[31:24] = rMemory[iwReadAddr + 3];
 
 assign owLastData[7:0] = rMemory[pWords * 4 - 4];
 assign owLastData[15:8] = rMemory[pWords * 4 - 3];
@@ -44,6 +39,11 @@ always @(negedge iwClk or negedge iwnRst) begin
 		if (iwWstrb & 4'b1000)
 			rMemory[iwWriteAddr + 3] = iwWriteData[31:24];
 	end
+
+	orReadData[7:0] = rMemory[iwReadAddr];
+	orReadData[15:8] = rMemory[iwReadAddr + 1];
+	orReadData[23:16] = rMemory[iwReadAddr + 2];
+	orReadData[31:24] = rMemory[iwReadAddr + 3];
 end
 
 endmodule

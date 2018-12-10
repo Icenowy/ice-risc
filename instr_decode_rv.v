@@ -25,6 +25,7 @@ module instr_decode_rv(
 
 	output wire owExePresent,
 	output wire owMemPresent,
+	output wire owMemReadWaitPresent,
 	output wire owWbPresent,
 
 	output reg ornIllegal
@@ -117,6 +118,7 @@ assign owExePresent = wOpCode == `RISCV_OPCODE_BRANCH || wOpCode == `RISCV_OPCOD
 		      wOpCode == `RISCV_OPCODE_STORE || wOpCode == `RISCV_OPCODE_OP_IMM ||
 		      wOpCode == `RISCV_OPCODE_OP;
 assign owMemPresent = wOpCode == `RISCV_OPCODE_LOAD || wOpCode == `RISCV_OPCODE_STORE;
+assign owMemReadWaitPresent = wOpCode == `RISCV_OPCODE_LOAD;
 assign owWbPresent = wOpCode == `RISCV_OPCODE_LOAD || wOpCode == `RISCV_OPCODE_OP_IMM ||
 		     wOpCode == `RISCV_OPCODE_OP;
 

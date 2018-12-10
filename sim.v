@@ -15,7 +15,9 @@ reg rnRst;
 
 simple_memory mSimMemory(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData, wLastData);
 
-ice_risc_rv mIceRiscRV(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
+ice_risc_rv #(
+	.pMemReadWait(1)
+)mIceRiscRV(rClk, rnRst, wReadAddr, wWriteAddr, wWriteData, wWstrb, wReadData);
 
 initial begin
 	$dumpfile("sim.vcd");

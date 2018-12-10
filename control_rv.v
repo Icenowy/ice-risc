@@ -1,4 +1,6 @@
-module control_rv(
+module control_rv#(
+	parameter pMemReadWait = 1'b1
+)(
 	input wire iwClk,
 	input wire iwnRst,
 
@@ -58,6 +60,7 @@ wire [31:0]wReadDMemResult;
 
 wire wExePresent;
 wire wMemPresent;
+wire wMemReadWaitPresent;
 wire wWbPresent;
 
 wire wnStall;
@@ -91,7 +94,7 @@ instr_decode_rv mInstrDec(iwnRst, rInstruction, wPc, wAluOp, wAluBSrc,
 			  wWriteRegImmediate, wDMemWrite, wDMemSignExtend,
 			  wDMemAccess, wNextPcSrc, wNextPcImmediate20,
 			  wNextPcImmediate12, wExePresent, wMemPresent,
-			  wWbPresent, wnIllegal);
+			  wMemReadWaitPresent, wWbPresent, wnIllegal);
 
 assign wPcUpdate = wnStall && rStateNext == `STATE_IF;
 
@@ -137,7 +140,14 @@ always @(posedge iwClk or negedge iwnRst) begin
 			if (rStateNext == `STATE_MEM)
 				orReadAddr <= {wAluResult[31:2], 2'b00};
 			case (rStateNext)
-			`STATE_IF: rStateNext <= `STATE_ID;
+			`STATE_IF: 
+				if (pMemReadWait) begin
+					rStateNext <= `STATE_IF_READ_WAIT;
+				end else begin
+					rStateNext <= `STATE_ID;
+				end
+			`STATE_IF_READ_WAIT:
+				rStateNext <= `STATE_ID;
 			`STATE_ID: rStateNext <= wExePresent ? `STATE_EXE :
 						 (wMemPresent ? `STATE_MEM :
 						  (wWbPresent ? `STATE_WB :
@@ -145,8 +155,18 @@ always @(posedge iwClk or negedge iwnRst) begin
 			`STATE_EXE: rStateNext <= wMemPresent ? `STATE_MEM :
 						  (wWbPresent ? `STATE_WB :
 						  `STATE_IF);
-			`STATE_MEM: rStateNext <= wWbPresent ? `STATE_WB :
-						 `STATE_IF;
+			`STATE_MEM:
+				if (pMemReadWait) begin
+					rStateNext <= wMemReadWaitPresent ?
+						      `STATE_MEM_READ_WAIT :
+						      (wWbPresent ? `STATE_WB :
+						       `STATE_IF);
+				end else begin
+					rStateNext <= wWbPresent ? `STATE_WB :
+						      `STATE_IF;
+				end
+			`STATE_MEM_READ_WAIT:
+				rStateNext <= wWbPresent ? `STATE_WB : `STATE_IF;
 			`STATE_WB: rStateNext <= `STATE_IF;
 			default: rStateNext <= `STATE_IF;
 			endcase
@@ -163,13 +183,17 @@ always @(negedge iwClk or negedge iwnRst) begin
 		rInstruction <= 32'h00000013; /* Normalized NOP */
 		rnHalt <= 1;
 	end else begin
-		if (rState == `STATE_IF)
+		if (rState == `STATE_IF && !pMemReadWait)
+			rInstruction <= iwReadData;
+		if (rState == `STATE_IF_READ_WAIT)
 			rInstruction <= iwReadData;
 		if (rState == `STATE_ID && rnHalt)
 			rnHalt <= wnIllegal;
 		if (rState == `STATE_EXE)
 			rAluResult <= wAluResult;
-		if (rState == `STATE_MEM)
+		if (rState == `STATE_MEM && !pMemReadWait)
+			rReadData <= iwReadData;
+		if (rState == `STATE_MEM_READ_WAIT)
 			rReadData <= iwReadData;
 	end
 end
