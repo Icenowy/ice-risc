@@ -11,6 +11,8 @@ RISCV_OBJCOPY = $(RISCV_CROSS_COMPILE)objcopy
 
 VVP = vvp
 
+MEM_DEPTH = 44
+
 %.vvp: %.v
 	$(IVERILOG) $(IVFLAGS) $< -o $@
 
@@ -38,6 +40,11 @@ test.elf: c.o s.o test.lds
 
 test.bin: test.elf
 	$(RISCV_OBJCOPY) -O binary $< $@
+
+gen_mif: gen_mif.o
+
+rom.mif: test.bin gen_mif
+	./gen_mif $(MEM_DEPTH) < test.bin > rom.mif
 
 gen_simple_memory_rom: gen_simple_memory_rom.o
 
